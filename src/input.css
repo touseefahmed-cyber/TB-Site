@@ -1,1 +1,103 @@
 @import "tailwindcss";
+@font-face {
+    font-family: 'GilroyBold';
+    src: url('fonts/GilroyBold.eot');
+    src: url('fonts/GilroyBold.eot') format('embedded-opentype'),
+    url('fonts/GilroyBold.woff2') format('woff2'),
+    url('fonts/GilroyBold.woff') format('woff'),
+    url('fonts/GilroyBold.ttf') format('truetype'),
+    url('fonts/GilroyBold.svg#GilroyBold') format('svg');
+}
+@font-face {
+    font-family: 'GilroyMedium';
+    src: url('fonts/GilroyMedium.eot');
+    src: url('fonts/GilroyMedium.eot') format('embedded-opentype'),
+    url('fonts/GilroyMedium.woff2') format('woff2'),
+    url('fonts/GilroyMedium.woff') format('woff'),
+    url('fonts/GilroyMedium.ttf') format('truetype'),
+    url('fonts/GilroyMedium.svg#GilroyMedium') format('svg');
+}
+@font-face {
+    font-family: 'GilroyRegular';
+    src: url('fonts/GilroyRegular.eot');
+    src: url('fonts/GilroyRegular.eot') format('embedded-opentype'),
+    url('fonts/GilroyRegular.woff2') format('woff2'),
+    url('fonts/GilroyRegular.woff') format('woff'),
+    url('fonts/GilroyRegular.ttf') format('truetype'),
+    url('fonts/GilroyRegular.svg#GilroyRegular') format('svg');
+}
+
+@theme{
+    --font-GiloryBold:GilroyBold;
+    --font-GiloryMedium:GilroyMedium;
+}
+@layer base {
+    h1 {
+        font-family: 'GilroyBold', sans-serif;
+        @apply text-2xl sm:text-3xl md:text-4xl lg:text-[75px];
+    }
+    h2 {
+        font-family: 'GilroyMedium', sans-serif;
+        @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+    }
+}
+
+@layer components {
+    .heading {
+        font-family: 'GilroyMedium', sans-serif;
+        @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
+    }
+}
+body{
+    font-family: 'GilroyBold', sans-serif;
+}
+.tag{
+    position: relative;
+}
+.tag h1{
+    position: relative;
+}
+/*.tag h1::before{*/
+/*    position: absolute;*/
+/*    content: "";*/
+/*    top: -1.188rem;*/
+/*    left: 0;*/
+/*    background: transparent;*/
+/*    width: 1.2rem;*/
+/*    height: 1.2rem;*/
+/*    border-bottom-right-radius: 2rem;*/
+/*    box-shadow: 0.313rem 0.313rem 0px 0.313rem #fff;*/
+/*    transform: rotate(90deg);*/
+/*}*/
+.tag::before {
+    position: absolute;
+    content: "";
+    top: -47px;
+    left: 0px;
+    background: transparent;
+    width: 48px;
+    height: 48px;
+    border-bottom-right-radius: 48px;
+    box-shadow: 13px 21px 0px 13px #fff;
+    transform: rotate(90deg);
+}
+.tag{
+    border-top-right-radius: 48px;
+}
+.tag::after,
+.tag-2::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    right: -47px;
+    background: transparent;
+    width: 48px;
+    height: 48px;
+    border-bottom-right-radius: 48px;
+    box-shadow: 12px 8px 0px 5px #fff;
+    transform: rotate(90deg);
+}
+.tag-2{
+    position: relative;
+    border-top-right-radius: 48px;
+}
