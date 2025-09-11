@@ -4,22 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"  />
-    <link href="../src/output.css" rel="stylesheet">
+    <link href="src/output.css" rel="stylesheet">
 </head>
 <body>
 <div id="cursor"></div>
     <header class="px-[80px] absolute top-20 w-full">
         <div class="flex justify-between items-center px-[20px]">
             <a href="#">
-                <img src="../src/images/logo.svg" alt="logo">
+                <img src="src/images/logo.svg" alt="logo">
             </a>
             <div class="flex gap-4 items-center">
-                <div>
-                    <ul class="flex gap-[36px] py-[16px] px-[32px] bg-[rgba(178,178,178,0.3)]
-            rounded-[100px]
-            shadow-[0_4px_30px_rgba(0,0,0,0.1)]
-            backdrop-blur-[30px]
-            border border-[rgba(255,255,255,0.3)]">
+                <div class="glass-container py-[16px] px-[32px] rounded-[100px]">
+                    <div class="glass-filter"></div>
+                    <div class="glass-overlay"></div>
+                    <div class="glass-specular"></div>
+                    <ul class="flex gap-[36px] relative z-10">
                         <li><a href="#" class="text-white font-GilorySemiBold text-[24px] leading-[24px]">Services</a> </li>
                         <li><a href="#" class="text-white font-GilorySemiBold text-[24px] leading-[24px]">Portfolio</a> </li>
                         <li><a href="#" class="text-white font-GilorySemiBold text-[24px] leading-[24px]">People</a> </li>
@@ -32,16 +31,16 @@
             </div>
         </div>
     </header>
-    <div class="h-[100dvh] bg-[url(images/banner_img.jpg)] bg-no-repeat bg-center bg-cover mx-[80px] my-[50px] rounded-[48px] flex items-end">
+    <div class="h-[100dvh] bg-[url(images/banner_img.jpg)] bg-no-repeat bg-center bg-cover m-[50px_80px_95px] rounded-[48px] flex items-end">
         <div class="w-full flex items-end justify-between">
             <div>
                 <div class=" inline-block  mb-[30px] ml-[277px]">
                     <a href="#" class="inline-block text-[28px] rounded-full pl-[32px] px-[24px] py-[12px]  text-dark-gray font-semibold bg-light-gray">Let’s work together <i class="fa-solid fa-arrow-right rotate-[315deg] text-[24px] ml-[-6px]"></i></a>
                 </div>
-                <div class="w-[596px] bg-white pt-[29px] pb-[21px] tag">
+                <div class="w-[596px] bg-white pt-[29px] pb-[21px] relative shape">
                     <h1 class="text-dark-gray flex items-end justify-between mr-[20px]">We provide <a href="#" class="flex items-center justify-center bg-blue w-[86px] h-[86px] rounded-[25px]"><i class="fa-solid fa-arrow-right rotate-[140deg] text-[28px] text-white"></i></a> </h1>
                 </div>
-                <div class="w-[922px] bg-white tag-2 pb-[40px]">
+                <div class="w-[922px] bg-white shape-2 pb-[40px]">
                     <h1 class="text-dark-gray">Top Level
                         <div class="content__container">
                             <div class="content__container__list">
@@ -63,6 +62,17 @@
             </div>
         </div>
     </div>
-<script src="../src/js/main.js"></script>
+<!--    <div class="bg-dark-gray rounded-tl-[30px] rounded-tr-[30px] py-[200px] px-[128px] mx-[80px]">-->
+<!--        <div class="">-->
+<!--            <div>-->
+<!--                <h2>-->
+<!--                    <img src="" alt="">-->
+<!--                    <span></span>-->
+
+<!--                </h2>-->
+<!--            </div>-->
+<!--        </div>-->
+    </div>
+<script src="src/js/main.js"></script>
 </body>
 </html>
