@@ -1,4 +1,6 @@
 @import "tailwindcss";
+@tailwind components;
+@tailwind utilities;
 *{
     box-sizing: border-box;
 }
@@ -39,14 +41,25 @@
     url('fonts/GilroySemiBold.svg#GilroySemiBold') format('svg');
 }
 
+@font-face {
+    font-family: 'GilroyLight';
+    src: url('fonts/GilroyLight.eot');
+    src: url('fonts/GilroyLight.eot') format('embedded-opentype'),
+    url('fonts/GilroyLight.woff2') format('woff2'),
+    url('fonts/GilroyLight.woff') format('woff'),
+    url('fonts/GilroyLight.ttf') format('truetype'),
+    url('fonts/GilroyLight.svg#GilroyLight') format('svg');
+}
 
 @theme{
     --font-GiloryBold:GilroyBold;
     --font-GiloryMedium:GilroyMedium;
     --font-GilorySemiBold:GilroySemiBold;
+    --font-GilroyLight:GilroyLight;
     --color-blue:#395BE6;
     --color-dark-gray:#141414;
     --color-light-gray:#F1F1F1;
+    --color-navy-blue:#0F084B;
 }
 @layer base {
     h1 {
@@ -81,11 +94,22 @@
         @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
     }
     .shape::before {
-        @apply absolute top-[-47px] left-0 bg-transparent w-[48px] h-[48px] after:content-[''] rounded-br-[48px] rotate-90 shadow-[13px_21px_0px_13px_#fff];
+        @apply absolute top-[-47px] left-0 bg-transparent;
+        content: "";
+        width: 48px;
+        height: 48px;
+        border-bottom-right-radius: 48px;
+        box-shadow: 13px 21px 0px 13px #fff;
+        transform: rotate(90deg);
+
     }
     .shape::after,
     .shape-2::after {
-        @apply absolute bottom-0 right-[-47px] bg-transparent w-[48px] h-[48px] after:content-[''] rounded-br-[48px] shadow-[12px_8px_0px_5px_#fff] rotate-90;
+        @apply absolute bottom-0 right-[-47px] bg-transparent w-[48px] h-[48px];
+        content: "";
+        border-bottom-right-radius: 48px;
+        box-shadow: 12px 8px 0px 5px #fff;
+        transform: rotate(90deg);
     }
     /* Cursor */
     #cursor {
@@ -94,29 +118,42 @@
     a:hover {
         @apply cursor-pointer;
     }
-    /* Text slider container */
-    .content__container {
-        @apply inline-block h-[92px] overflow-hidden align-middle;
-    }
-    .content__container__list__item {
-        @apply block leading-[92px] m-0 p-0;
-    }
-    .content__container__list {
-        @apply block animate-change;
-    }
+
 
 }
 body{
     font-family: 'GilroyRegular';
+    color: #141414;
 }
-/*.shape{*/
-/*    border-top-right-radius: 48px;*/
-/*}*/
+.shape{
+    position: relative;
+}
 
-/*.shape-2{*/
-/*    position: relative;*/
-/*    border-top-right-radius: 48px;*/
-/*}*/
+.shape{
+    border-top-right-radius: 48px;
+}
+
+.shape-2{
+    position: relative;
+    border-top-right-radius: 48px;
+}
+.content__container {
+    display: inline-block;
+    height: 92px; /* height = one item */
+    overflow: hidden;
+    vertical-align: middle;
+}
+.content__container__list {
+    display: block;
+    animation: change 8s infinite;
+}
+.content__container__list__item {
+    display: block;
+    line-height: 92px;
+    margin: 0;
+    padding: 0;
+}
+
 @keyframes change {
     0%, 20% { transform: translateY(0); }
     25%, 45% { transform: translateY(-92px); }
@@ -124,3 +161,13 @@ body{
     75%, 95% { transform: translateY(-276px); }
     100% { transform: translateY(0); }
 }
+
+.shape{
+    border-top-right-radius: 48px;
+}
+
+.shape-2{
+    position: relative;
+    border-top-right-radius: 48px;
+}
+
