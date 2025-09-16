@@ -95,13 +95,22 @@
 
     .glass-overlay {
         @apply absolute inset-0 rounded-[inherit] z-[1] bg-[rgb(178_178_178_/_30%)];
-        /* alternative:
-        @apply bg-[rgba(255,255,255,0.25)];
-        */
     }
     .glass-specular {
         @apply absolute inset-0 rounded-[inherit] z-[2] shadow-[inset_1px_1px_0_#B3AAFF,inset_0_0_5px_rgb(197_195_255_/_50%)];
     }
+    .glass-filter2 {
+        @apply absolute inset-0 rounded-[inherit] z-0 backdrop-blur-[6px] saturate-[1.2] brightness-100;
+    }
+
+    .glass-overlay2 {
+        @apply absolute inset-0 rounded-[inherit] z-[1] bg-[#FFFFFF1A];
+    }
+
+    .glass-specular2 {
+        @apply absolute inset-0 rounded-[inherit] z-[2] shadow-[inset_1px_1px_0_#FFFFFF40,inset_0_0_8px_#FFFFFF1A];
+    }
+
     .heading {
         font-family: 'GilroyMedium', sans-serif;
         @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
@@ -224,19 +233,19 @@ body{
 /*    20%, 100% { opacity: 1; }*/
 /*}*/
 /* Second phase */
-/*.line-lft {*/
-/*    position: absolute;*/
-/*    left: 78px;*/
-/*    bottom: 0;*/
-/*    width: 6px;*/
-/*    height: 40px;*/
-/*    background: #C3F55A;*/
-/*    border-radius: 5px;*/
-/*    animation: linemover 5s ease-in-out forwards;*/
-/*    animation-delay: 3s; !* mover khatam hone ke baad start hoga *!*/
-/*    opacity: 0;*/
-/*    animation-iteration-count: 2;*/
-/*}*/
+.line-lft {
+    position: absolute;
+    left: 78px;
+    bottom: 0;
+    width: 6px;
+    height: 40px;
+    background: #C3F55A;
+    border-radius: 5px;
+    /*animation: linemover 5s ease-in-out forwards;*/
+    /*animation-delay: 3s; !* mover khatam hone ke baad start hoga *!*/
+    /*opacity: 0;*/
+    /*animation-iteration-count: 2;*/
+}
 
 /*@keyframes linemover {*/
 /*    0% { bottom: 0; opacity: 1; }*/

@@ -402,12 +402,6 @@
   .border-\[\#C4C4C4\] {
     border-color: #C4C4C4;
   }
-  .border-white\/10 {
-    border-color: color-mix(in srgb, #fff 10%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      border-color: color-mix(in oklab, var(--color-white) 10%, transparent);
-    }
-  }
   .bg-blue {
     background-color: var(--color-blue);
   }
@@ -422,12 +416,6 @@
   }
   .bg-white {
     background-color: var(--color-white);
-  }
-  .bg-white\/10 {
-    background-color: color-mix(in srgb, #fff 10%, transparent);
-    @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-white) 10%, transparent);
-    }
   }
   .bg-gradient-to-r {
     --tw-gradient-position: to right in oklab;
@@ -760,6 +748,33 @@
     --tw-shadow: inset 1px 1px 0 var(--tw-shadow-color, #B3AAFF), inset 0 0 5px var(--tw-shadow-color, rgb(197 195 255 / 50%));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .glass-filter2 {
+    position: absolute;
+    inset: calc(var(--spacing) * 0);
+    z-index: 0;
+    border-radius: inherit;
+    --tw-brightness: brightness(100%);
+    --tw-saturate: saturate(1.2);
+    filter: var(--tw-blur,) var(--tw-brightness,) var(--tw-contrast,) var(--tw-grayscale,) var(--tw-hue-rotate,) var(--tw-invert,) var(--tw-saturate,) var(--tw-sepia,) var(--tw-drop-shadow,);
+    --tw-backdrop-blur: blur(6px);
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .glass-overlay2 {
+    position: absolute;
+    inset: calc(var(--spacing) * 0);
+    z-index: 1;
+    border-radius: inherit;
+    background-color: #FFFFFF1A;
+  }
+  .glass-specular2 {
+    position: absolute;
+    inset: calc(var(--spacing) * 0);
+    z-index: 2;
+    border-radius: inherit;
+    --tw-shadow: inset 1px 1px 0 var(--tw-shadow-color, #FFFFFF40), inset 0 0 8px var(--tw-shadow-color, #FFFFFF1A);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
   .heading {
     font-family: 'GilroyMedium', sans-serif;
     font-size: var(--text-2xl);
@@ -901,6 +916,15 @@ body {
   height: 100%;
   border-left: 1px solid #C4C4C4;
   position: absolute;
+}
+.line-lft {
+  position: absolute;
+  left: 78px;
+  bottom: 0;
+  width: 6px;
+  height: 40px;
+  background: #C3F55A;
+  border-radius: 5px;
 }
 .card .top-section {
   margin-top: -1px;
