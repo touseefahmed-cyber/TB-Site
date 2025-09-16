@@ -121,3 +121,36 @@ gsap.utils.toArray(".panel").forEach((panel, i) => {
 ScrollTrigger.create({
     snap: 1 / 4 // snap whole page to the closest section!
 });
+//count js
+const createOdometer = (el) => {
+    const value = parseInt(el.getAttribute('data-value'));
+    const odometer = new Odometer({
+        el: el,
+        value: 0,
+    });
+
+    let hasRun = false;
+
+    const options = {
+        root: null, // viewport
+        threshold: 0.3, // kam se kam 30% visible ho tab chale
+    };
+
+    const callback = (entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting && !hasRun) {
+                odometer.update(value);
+                hasRun = true;
+                observer.unobserve(el); // dobara na chale
+            }
+        });
+    };
+
+    const observer = new IntersectionObserver(callback, options);
+    observer.observe(el);
+};
+
+// Initialize all odometers
+document.querySelectorAll('.odometer').forEach((odometerEl) => {
+    createOdometer(odometerEl);
+});

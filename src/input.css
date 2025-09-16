@@ -272,7 +272,7 @@ body{
     left: calc(1px + 96px);
     top: 0;
     width: 30px;
-    height: 4px;
+    height: 6px;
     background: #C3F55A;
     opacity: 0;
     transform: rotate(90deg);
@@ -283,7 +283,7 @@ body{
     bottom: 2px;
     left: 0;
     width: 30px;
-    height: 4px;
+    height: 6px;
     background: #C3F55A;
     opacity: 0;
 }
@@ -304,7 +304,7 @@ body{
     right: calc(1px + 96px);
     top: 0;
     width: 30px;
-    height: 4px;
+    height: 6px;
     background: #C3F55A;
     opacity: 0;
     transform: rotate(90deg);
@@ -324,7 +324,7 @@ body{
     right: calc(1px + 27.7%);
     top: 0;
     width: 30px;
-    height: 4px;
+    height: 6px;
     background: #C3F55A;
     opacity: 0;
     transform: rotate(90deg);
