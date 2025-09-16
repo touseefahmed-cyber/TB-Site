@@ -194,38 +194,38 @@ body{
 }
 
 /**/
-.border-btm:after{
-    content: "";
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    border-bottom: 1px solid #C4C4C4;
-    position: absolute;
-    /*animation: mover 2s infinite alternate;*/
-}
+/*.border-btm:after{*/
+/*    content: "";*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    width: 100%;*/
+/*    height: 1px;*/
+/*    border-bottom: 1px solid #C4C4C4;*/
+/*    position: absolute;*/
+/*    !*animation: mover 2s infinite alternate;*!*/
+/*}*/
 
-.border-rt:before{
-    content: "";
-    top: 0;
-    right: 0;
-    width: 1px;
-    height: 100%;
-    border-right: 1px solid #C4C4C4;
-    position: absolute;
-    /*animation: mover 8s infinite alternate;*/
-}
-.border-lft:after {
-    content: "";
-    bottom: 0;
-    left: 0;
-    width: 1px;
-    height: 100%;
-    border-left: 1px solid #C4C4C4;
-    position: absolute;
-    /*animation: mover 7s ease-in-out forwards;*/
-    /*animation-delay: 0s;*/
-}
+/*.border-rt:before{*/
+/*    content: "";*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    width: 1px;*/
+/*    height: 100%;*/
+/*    border-right: 1px solid #C4C4C4;*/
+/*    position: absolute;*/
+/*    !*animation: mover 8s infinite alternate;*!*/
+/*}*/
+/*.border-lft:after {*/
+/*    content: "";*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    width: 1px;*/
+/*    height: 100%;*/
+/*    border-left: 1px solid #C4C4C4;*/
+/*    position: absolute;*/
+/*    !*animation: mover 7s ease-in-out forwards;*!*/
+/*    !*animation-delay: 0s;*!*/
+/*}*/
 
 /*@keyframes mover {*/
 /*    0%, 20% { opacity: 0; }*/
@@ -233,19 +233,19 @@ body{
 /*    20%, 100% { opacity: 1; }*/
 /*}*/
 /* Second phase */
-.line-lft {
-    position: absolute;
-    left: 78px;
-    bottom: 0;
-    width: 6px;
-    height: 40px;
-    background: #C3F55A;
-    border-radius: 5px;
-    /*animation: linemover 5s ease-in-out forwards;*/
-    /*animation-delay: 3s; !* mover khatam hone ke baad start hoga *!*/
-    /*opacity: 0;*/
-    /*animation-iteration-count: 2;*/
-}
+/*.line-lft {*/
+/*    position: absolute;*/
+/*    left: 78px;*/
+/*    bottom: 0;*/
+/*    width: 6px;*/
+/*    height: 40px;*/
+/*    background: #C3F55A;*/
+/*    border-radius: 5px;*/
+/*    !*animation: linemover 5s ease-in-out forwards;*!*/
+/*    !*animation-delay: 3s; !* mover khatam hone ke baad start hoga *!*!*/
+/*    !*opacity: 0;*!*/
+/*    !*animation-iteration-count: 2;*!*/
+/*}*/
 
 /*@keyframes linemover {*/
 /*    0% { bottom: 0; opacity: 1; }*/
@@ -367,3 +367,89 @@ body{
     z-index: -2;
     border-radius: 48px;
 }
+/*Animation statics section*/
+/*Animation statics section*/
+
+.border-btm {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #C4C4C4;
+    opacity: 1;
+}
+.border-lft-animation {
+    position: absolute;
+    left: calc(1px + 110px);
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: #C4C4C4;
+    opacity: 1;
+}
+.line {
+    position: absolute;
+    left: calc(1px + 96px);
+    top: 0;
+    width: 30px;
+    height: 4px;
+    background: #C3F55A;
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+.line-bottom {
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    width: 30px;
+    height: 4px;
+    background: #C3F55A;
+    opacity: 0;
+}
+/* Right border */
+.border-rt-animation {
+    position: absolute;
+    right: calc(1px + 110px);
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: #C4C4C4;
+    opacity: 1;
+}
+
+/* Right side line */
+.line-rt {
+    position: absolute;
+    right: calc(1px + 96px);
+    top: 0;
+    width: 30px;
+    height: 4px;
+    background: #C3F55A;
+    opacity: 0;
+    transform: rotate(90deg);
+}
+.border-top-animation {
+    position: absolute;
+    right: calc(1px + 27.7%);
+    top: 0;
+    height: 100%;
+    width: 1px;
+    background: #C4C4C4;
+    opacity: 1;
+}
+
+.line-top {
+    position: absolute;
+    right: calc(1px + 27.7%);
+    top: 0;
+    width: 30px;
+    height: 4px;
+    background: #C3F55A;
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+/*Animation statics section*/
+/*Animation statics section*/

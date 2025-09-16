@@ -7,7 +7,7 @@
     <link href="src/output.css" rel="stylesheet">
 </head>
 <body>
-<!--<div id="cursor"></div>-->
+<div id="cursor"></div>
 <header class="px-[80px] absolute top-20 w-full">
     <div class="flex justify-between items-center px-[20px]">
         <a href="#">
@@ -123,9 +123,16 @@
         </div>
     </div>
 </div>
-<div class="relative">
-    <div class="line-lft"></div>
-    <div class="border-btm relative">
+<div class="relative overflow-hidden">
+    <div class="border-top-animation"></div>
+    <div class="line-top"></div>
+    <div class="border-lft-animation "></div>
+    <div class="line"></div>
+    <div class="border-rt-animation"></div>
+    <div class="line-rt"></div>
+    <div class="relative">
+        <div class="border-btm"></div>
+        <div class="line-bottom"></div>
         <div class="flex items-center justify-between mx-[110px] border-rt relative">
             <div class="border-lft border-rt relative pt-[145px] pb-[80px] w-[75.03%] ">
                 <h2 class="text-[200px] leading-[200px] text-navy-blue">Key <br> milestones</h2>
@@ -154,14 +161,8 @@
         </div>
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="src/js/main.js"></script>
-<script>
-    const line = document.querySelector('.line-lft');
-    const border = document.querySelector('.border-lft');
-
-    line.addEventListener('animationend', () => {
-        border.classList.add('reanimate');
-    });
-</script>
 </body>
 </html>

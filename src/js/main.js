@@ -49,3 +49,59 @@
     }
 })();
 //
+//Animation statics section\
+gsap.registerPlugin(ScrollTrigger);
+
+const borderLeft = document.querySelector('.border-lft-animation');
+const borderBottom = document.querySelector('.border-btm');
+const borderTop = document.querySelector('.border-top-animation');
+const borderRt = document.querySelector('.border-rt-animation');
+const line = document.querySelector('.line');
+const lineBottom = document.querySelector('.line-bottom');
+const lineTop = document.querySelector('.line-top');
+const lineRt = document.querySelector('.line-rt');
+
+function animateCycle() {
+    const tl = gsap.timeline({
+        repeat: -1,
+        repeatDelay: 0.5,
+        scrollTrigger: {
+            trigger: ".your-section",   // 👈 replace with your section/class
+            start: "top 80%",           // when section top hits 80% viewport
+            toggleActions: "play none none reverse"
+        }
+    });
+
+    // 1. Borders fade out
+    tl.to([borderLeft, borderBottom, borderTop, borderRt], { opacity: 0, duration: 0.8 });
+
+    // 2. Forward animation
+    tl.to(line, { opacity: 1, top: "100%", duration: 3, ease: "power1.inOut" }, ">");
+    tl.to(lineBottom, { opacity: 1, left: "100%", duration: 3, ease: "power1.inOut" }, "<");
+    tl.to(lineTop, { opacity: 1, top: "100%", duration: 3, ease: "power1.inOut" }, "<");
+    tl.to(lineRt, { opacity: 1, top: "100%", duration: 3, ease: "power1.inOut" }, "<");
+
+    // 3. Hide lines
+    tl.to([line, lineBottom, lineTop, lineRt], { opacity: 0, duration: 0.5 }, "+=0.2");
+
+    // 4. Borders fade in briefly
+    tl.to([borderLeft, borderBottom, borderTop, borderRt], { opacity: 1, duration: 0.8 });
+    tl.to({}, { duration: 1 });
+
+    // 5. Borders fade out
+    tl.to([borderLeft, borderBottom, borderTop, borderRt], { opacity: 0, duration: 0.5 });
+
+    // 6. Reverse animation
+    tl.to(line, { opacity: 1, top: "0px", duration: 2, ease: "power1.inOut" }, ">");
+    tl.to(lineBottom, { opacity: 1, left: "0%", duration: 2, ease: "power1.inOut" }, "<");
+    tl.to(lineTop, { opacity: 1, top: "0px", duration: 2, ease: "power1.inOut" }, "<");
+    tl.to(lineRt, { opacity: 1, top: "0%", duration: 2, ease: "power1.inOut" }, "<");
+
+    // 7. Hide lines
+    tl.to([line, lineBottom, lineTop, lineRt], { opacity: 0, duration: 0.5 }, "+=0.2");
+
+    // 8. Borders fade in ready for next cycle
+    tl.to([borderLeft, borderBottom, borderTop, borderRt], { opacity: 1, duration: 0.8 });
+}
+
+animateCycle();
