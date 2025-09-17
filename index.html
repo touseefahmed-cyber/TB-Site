@@ -15,7 +15,7 @@
 </head>
 <body class="overflow-x-hidden">
 <div id="cursor"></div>
-<header id="header" class="px-[80px] z-30 fixed top-20 w-full">
+<header id="header" class="4xl:px-[80px] px-[30px] z-30 fixed top-20 w-full">
     <div class="flex justify-between items-center px-[20px]">
         <a href="#">
             <img src="src/images/logo.svg" alt="logo">
@@ -38,19 +38,19 @@
         </div>
     </div>
 </header>
-<div class="h-[100dvh]  bg-no-repeat bg-center bg-cover m-[50px_80px_95px] rounded-[48px] flex items-end relative panel">
-    <video class="video-background" poster="src/images/banner_img.jpg" autoplay muted loop>
+<div class="h-[100dvh]  bg-no-repeat bg-center bg-cover 4xl:m-[50px_80px_95px] lg:m-[24px_24px_95px] m-[24px_24px_30px] lg:rounded-[48px] rounded-[28px] flex items-end relative panel">
+    <video class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 object-cover w-full h-full m-0 -z-20 lg:rounded-[48px] rounded-[28px]" poster="src/images/banner_img.jpg" autoplay muted loop>
         <source src="src/vedio/banner_vedio.mp4" type="video/mp4">
     </video>
-    <div class="w-full flex items-end justify-between">
-        <div>
-            <div class=" inline-block  mb-[30px] ml-[277px]">
-                <a href="#" class="inline-block text-[28px] rounded-full pl-[32px] px-[24px] py-[12px]  text-dark-gray font-semibold bg-light-gray">Let’s work together <i class="fa-solid fa-arrow-right rotate-[315deg] text-[24px] ml-[-6px]"></i></a>
+    <div class="w-full flex items-end justify-between mb-[-1px]">
+        <div class="lg:w-fit w-full">
+            <div class=" inline-block  mb-[30px] 3xl:ml-[277px] lg:ml-[165px] ml-[15px]">
+                <a href="#" class="inline-block 3xl:text-[28px] lg:text-[24px] md:text-[20px] text-[14px] rounded-full pl-[32px] pr-[24px] py-[12px]  text-dark-gray font-semibold bg-light-gray">Let’s work together <i class="fa-solid fa-arrow-right rotate-[315deg] lg:text-[24px] md:text-[20px] text-[14px] ml-[-6px]"></i></a>
             </div>
-            <div class="w-[596px] bg-white pt-[29px] pb-[21px] relative shape">
-                <h1 class="text-dark-gray flex items-end justify-between mr-[20px]">We provide <a href="#" class="flex items-center justify-center bg-blue w-[86px] h-[86px] rounded-[25px]"><i class="fa-solid fa-arrow-right rotate-[140deg] text-[28px] text-white"></i></a> </h1>
+            <div class="3xl:w-[596px] 2xl:w-[500px] lg:w-[450px] w-[70%] bg-white lg:pt-[29px] pt-[20px] 3xl:pb-[21px] relative shape">
+                <h1 class="text-dark-gray flex items-end justify-between mr-[20px]">We provide <a href="#" class="flex items-center justify-center bg-blue 3xl:w-[86px] 3xl:h-[86px] 2xl:w-[75px] 2xl:h-[75px] md:w-[65px] md:h-[65px] h-[34px] w-[34px] lg:rounded-[25px] md:rounded-[15px] rounded-[9px]"><i class="fa-solid fa-arrow-right rotate-[140deg] md:text-[28px] text-[20px] text-white"></i></a> </h1>
             </div>
-            <div class="w-[922px] bg-white shape-2 pb-[40px]">
+            <div class="3xl:w-[922px] 2xl:w-[700px] lg:w-[540px] w-[85%] bg-white shape-2 3xl:pb-[40px] pb-[10px]">
                 <h1 class="text-dark-gray">
                     Top Level
                     <div class="content__container">
@@ -64,13 +64,20 @@
                 </h1>
             </div>
         </div>
-        <div class="text-light-gray  rounded-[30px] inline-block w-[424px] mr-[28px] mb-[28px] pt-[33px] pb-[30px] px-[30px] shape-img.png  bg-[url(images/shape-img.png)] bg-no-repeat bg-center relative">
-            <h5 class="text-[32px] leading-[32px] mb-[22px]">What we offer?</h5>
-            <p class="text-[24px] leading-[30px]">TopBoffin provides fully managed overseas talent working UK hours and following UK policies—at 70% less.</p>
+        <div class="text-light-gray  rounded-[30px] hidden lg:inline-block 2xl:w-[424px] bg-contain w-[380px] mr-[28px] mb-[28px] pt-[33px] pb-[30px] px-[30px] shape-img.png  bg-[url(images/shape-img.png)] bg-no-repeat bg-center relative">
+            <h5 class="2xl:text-[32px] text-[28px] leading-[28px] 2xl:leading-[32px] mb-[22px]">What we offer?</h5>
+            <p class="2xl:text-[24px] text-[20px] 2xl:leading-[30px] leading-[26px]">TopBoffin provides fully managed overseas talent working UK hours and following UK policies—at 70% less.</p>
             <div>
                 <a href="#" class="flex items-center justify-center bg-light-gray  w-[56.5px] h-[56.5px] rounded-[15px] absolute top-0 right-0"><i class="fa-solid fa-arrow-right rotate-[140deg] text-[28px] text-dark-gray"></i></a>
             </div>
         </div>
+    </div>
+</div>
+<div class="text-center mb-[30px] lg:hidden">
+    <h2 class="text-[45px] leading-[40px] text-[#1414141a] font-GiloryBold">What We offer</h2>
+    <p class="text-[14px] leading-[18px] mb-[20px]">Access vetted global talent working UK <br> hours - at <strong>70%</strong> lower cost, Zero hiring risk</p>
+    <div>
+        <a href="#" class="inline-block font-GilorySemiBold bg-blue text-[16px] leading-normal text-white rounded-[30px] p-[6px_64px_6px_65px] ">Let’s Talk</a>
     </div>
 </div>
 <div class="bg-dark-gray rounded-tl-[50px] relative rounded-tr-[50px] py-[200px] px-[128px] mx-[80px] w-auto">
