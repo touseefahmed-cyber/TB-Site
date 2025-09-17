@@ -158,6 +158,29 @@
         @apply block m-0 p-0;
         line-height: clamp(33px, 10vw, 92px);
     }
+    .card .top-section {
+        @apply -mt-[1px] rounded-[30px] flex flex-col relative bg-[#395BE6];
+    }
+
+    .card .top-section::before {
+        content: "";
+        @apply absolute top-[150px] left-0 h-[55px] w-[55px] rounded-tl-[22px] z-[9];
+        background: rgba(255, 255, 255, 0);
+        box-shadow: -5px -5px 0 2px #141414;
+    }
+
+    .card .top-section .border-shape {
+        @apply absolute h-[150px] w-[160px] rounded-br-[30px] bg-[#141414];
+        transform: skew(-20deg);
+        box-shadow: -10px -10px 0 0 #141414;
+    }
+
+    .card .top-section .border-shape::before {
+        content: "";
+        @apply absolute top-0 -right-[55px] h-[55px] w-[55px] rounded-tl-[22px] z-[9];
+        background: rgba(255, 255, 255, 0);
+        box-shadow: -5px -5px 0 2px #141414;
+    }
 }
 body{
     font-family: 'GilroyRegular';
@@ -174,46 +197,47 @@ body{
     100% { transform: translateY(0); }
 }
 /**/
-.card .top-section {
-    margin-top: -1px;
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    background: #395BE6;
-    position: relative;
-}
-.card .top-section::before {
-    content: "";
-    position: absolute;
-    top: 150px;
-    left: 0;
-    background: rgba(255, 255, 255, 0);
-    height: 15px;
-    width: 15px;
-    border-top-left-radius: 15px;
-    box-shadow: -5px -5px 0 2px #141414;
-    z-index: 9;
-}
-.card .top-section .border-shape {
-    border-bottom-right-radius: 10px;
-    height: 150px;
-    width: 170px;
-    background: #141414;
-    transform: skew(-40deg);
-    position: absolute;
-    box-shadow: -10px -10px 0 0 #141414;
-}
-.card .top-section .border-shape::before {
-    content: "";
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    top: 0;
-    right: -15px;
-    background: rgba(255, 255, 255, 0);
-    border-top-left-radius: 10px;
-    box-shadow: -5px -5px 0 2px #141414, -3px -5px 0 2px #141414;
-}
+/*.card .top-section {*/
+/*    margin-top: -1px;*/
+/*    border-radius: 30px;*/
+/*    display: flex;*/
+/*    flex-direction: column;*/
+/*    background: #395BE6;*/
+/*    position: relative;*/
+/*}*/
+/*.card .top-section::before {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: 150px;*/
+/*    left: 0;*/
+/*    background: rgba(255, 255, 255, 0);*/
+/*    height: 55px;*/
+/*    width: 55px;*/
+/*    border-top-left-radius: 22px;*/
+/*    box-shadow: -5px -5px 0 2px #141414;*/
+/*    z-index: 9;*/
+/*}*/
+/*.card .top-section .border-shape {*/
+/*    border-bottom-right-radius: 30px;*/
+/*    height: 150px;*/
+/*    width: 160px;*/
+/*    background: #141414;*/
+/*    transform: skew(-20deg);*/
+/*    position: absolute;*/
+/*    box-shadow: -10px -10px 0 0 #141414;*/
+/*}*/
+/*.card .top-section .border-shape::before {*/
+/*    content: "";*/
+/*    position: absolute;*/
+/*    top: 0px;*/
+/*    right: -55px;*/
+/*    background: rgba(255, 255, 255, 0);*/
+/*    height: 55px;*/
+/*    width: 55px;*/
+/*    border-top-left-radius: 22px;*/
+/*    box-shadow: -5px -5px 0 2px #141414;*/
+/*    z-index: 9;*/
+/*}*/
 /*Animation statics section*/
 /*Animation statics section*/
 .border-btm {
