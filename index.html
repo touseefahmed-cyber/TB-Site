@@ -13,9 +13,9 @@
     />
     <link href="src/output.css" rel="stylesheet">
 </head>
-<body>
-<!--<div id="cursor"></div>-->
-<header class="px-[80px] z-30 fixed top-20 w-full">
+<body class="overflow-x-hidden">
+<div id="cursor"></div>
+<header id="header" class="px-[80px] z-30 fixed top-20 w-full">
     <div class="flex justify-between items-center px-[20px]">
         <a href="#">
             <img src="src/images/logo.svg" alt="logo">
@@ -33,7 +33,7 @@
                 </ul>
             </div>
             <div>
-                <a href="#" class="inline-block font-GilorySemiBold text-blue text-[24px] leading-normal bg-white rounded-[30px] p-[12px_33px_13px_32px]">Hire Now</a>
+                <a href="#" class="inline-block font-GilorySemiBold text-blue text-[24px] leading-normal bg-white rounded-[30px] p-[12px_33px_13px_32px] hire_btn">Hire Now</a>
             </div>
         </div>
     </div>
@@ -130,7 +130,7 @@
         </div>
     </div>
 </div>
-<div class="relative overflow-hidden">
+<div id="content" class="relative overflow-hidden">
     <div class="border-top-animation"></div>
     <div class="line-top"></div>
     <div class="border-lft-animation "></div>

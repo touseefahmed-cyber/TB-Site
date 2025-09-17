@@ -154,3 +154,16 @@ const createOdometer = (el) => {
 document.querySelectorAll('.odometer').forEach((odometerEl) => {
     createOdometer(odometerEl);
 });
+//header White
+window.addEventListener('scroll', function() {
+    const header = document.getElementById('header');
+    const content = document.getElementById('content');
+    const contentRect = content.getBoundingClientRect();
+
+    // Check if the header is overlapping with the content
+    if (contentRect.top <= header.offsetHeight) {
+        header.classList.add('white-header');
+    } else {
+        header.classList.remove('white-header');
+    }
+});

@@ -378,6 +378,9 @@
   .overflow-hidden {
     overflow: hidden;
   }
+  .overflow-x-hidden {
+    overflow-x: hidden;
+  }
   .rounded-\[15px\] {
     border-radius: 15px;
   }
@@ -468,6 +471,9 @@
   .p-\[18px_65px_18px_64px\] {
     padding: 18px 65px 18px 64px;
   }
+  .px-\[7\.188rem\] {
+    padding-inline: 7.188rem;
+  }
   .px-\[20px\] {
     padding-inline: 20px;
   }
@@ -488,6 +494,9 @@
   }
   .px-\[128px\] {
     padding-inline: 128px;
+  }
+  .px-\[clamp\(1\.5rem\,6vw\,7\.188rem\)\] {
+    padding-inline: clamp(1.5rem, 6vw, 7.188rem);
   }
   .py-\[12px\] {
     padding-block: 12px;
@@ -974,20 +983,22 @@ body {
   position: absolute;
   left: calc(1px + 96px);
   top: 0;
-  width: 30px;
+  width: 40px;
   height: 6px;
   background: #C3F55A;
   opacity: 0;
   transform: rotate(90deg);
+  border-radius: 5px;
 }
 .line-bottom {
   position: absolute;
   bottom: 2px;
   left: 0;
-  width: 30px;
+  width: 40px;
   height: 6px;
   background: #C3F55A;
   opacity: 0;
+  border-radius: 5px;
 }
 .border-rt-animation {
   position: absolute;
@@ -1002,8 +1013,9 @@ body {
   position: absolute;
   right: calc(1px + 96px);
   top: 0;
-  width: 30px;
+  width: 40px;
   height: 6px;
+  border-radius: 5px;
   background: #C3F55A;
   opacity: 0;
   transform: rotate(90deg);
@@ -1021,11 +1033,29 @@ body {
   position: absolute;
   right: calc(1px + 27.7%);
   top: 0;
-  width: 30px;
+  width: 40px;
   height: 6px;
   background: #C3F55A;
   opacity: 0;
+  border-radius: 5px;
   transform: rotate(90deg);
+}
+.white-header img {
+  filter: invert(56%) sepia(59%) saturate(20%) hue-rotate(44deg) brightness(6%) contrast(90%);
+}
+.white-header .hire_btn {
+  color: white;
+  background: var(--color-blue);
+}
+.white-header ul li a {
+  color: #131313;
+}
+.white-header .glass-container {
+  background: #B2B2B24D;
+  border: 1px solid #B3AAFF;
+}
+.white-header .glass-filter, .white-header .glass-overlay, .white-header .glass-specular {
+  display: none;
 }
 @property --tw-border-style {
   syntax: "*";
