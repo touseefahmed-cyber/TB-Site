@@ -312,9 +312,6 @@
   .h-\[600px\] {
     height: 600px;
   }
-  .h-\[calc\(100dvh-145px\)\] {
-    height: calc(100dvh - 145px);
-  }
   .h-full {
     height: 100%;
   }
@@ -339,17 +336,8 @@
   .w-\[75\.03\%\] {
     width: 75.03%;
   }
-  .w-\[82\%\] {
-    width: 82%;
-  }
   .w-\[85\%\] {
     width: 85%;
-  }
-  .w-\[90\%\] {
-    width: 90%;
-  }
-  .w-\[92\%\] {
-    width: 92%;
   }
   .w-\[129px\] {
     width: 129px;
@@ -517,9 +505,6 @@
   }
   .px-\[20px\] {
     padding-inline: 20px;
-  }
-  .px-\[24px\] {
-    padding-inline: 24px;
   }
   .px-\[30px\] {
     padding-inline: 30px;
@@ -813,11 +798,6 @@
       width: 500px;
     }
   }
-  .\32 xl\:w-\[600px\] {
-    @media (width >= 1200px) {
-      width: 600px;
-    }
-  }
   .\32 xl\:w-\[700px\] {
     @media (width >= 1200px) {
       width: 700px;
@@ -1041,16 +1021,16 @@
     position: absolute;
     top: -47px;
     left: calc(var(--spacing) * 0);
+    height: 48px;
+    width: 48px;
+    rotate: 90deg;
     border-bottom-right-radius: 28px;
     background-color: transparent;
     @media (width >= 1024px) {
       border-bottom-right-radius: 48px;
     }
     content: "";
-    width: 48px;
-    height: 48px;
     box-shadow: 13px 21px 0px 13px #fff;
-    transform: rotate(90deg);
   }
   .shape::after, .shape-2::after {
     position: absolute;
@@ -1111,26 +1091,26 @@
   a:hover {
     cursor: pointer;
   }
+  .content__container {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    height: clamp(33px, 10vw, 92px);
+  }
+  .content__container__list {
+    display: block;
+    animation: change 8s infinite;
+  }
+  .content__container__list__item {
+    margin: calc(var(--spacing) * 0);
+    display: block;
+    padding: calc(var(--spacing) * 0);
+    line-height: clamp(33px, 10vw, 92px);
+  }
 }
 body {
   font-family: 'GilroyRegular';
   color: #141414;
-}
-.content__container {
-  display: inline-block;
-  height: clamp(33px, 10vw, 92px);
-  overflow: hidden;
-  vertical-align: middle;
-}
-.content__container__list {
-  display: block;
-  animation: change 8s infinite;
-}
-.content__container__list__item {
-  display: block;
-  line-height: clamp(33px, 10vw, 92px);
-  margin: 0;
-  padding: 0;
 }
 @keyframes change {
   0%, 20% {

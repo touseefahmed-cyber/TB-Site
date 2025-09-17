@@ -86,7 +86,6 @@
     h1 {
         font-family: 'GilroyBold', sans-serif;
         @apply text-[clamp(33px,5vw,75px)] leading-[clamp(33px,5vw,75px)];
-
     }
     h2 {
         font-family: 'GilroyMedium', sans-serif;
@@ -97,11 +96,9 @@
     .glass-container {
         @apply relative overflow-hidden transition-all duration-[400ms] ease-[cubic-bezier(0.175,0.885,0.32,2.2)];
     }
-
     .glass-filter {
         @apply absolute inset-0 rounded-[inherit] z-0 backdrop-blur-[3px] saturate-[1.2] brightness-100;
     }
-
     .glass-overlay {
         @apply absolute inset-0 rounded-[inherit] z-[1] bg-[rgb(178_178_178_/_30%)];
     }
@@ -125,12 +122,9 @@
         @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
     }
     .shape::before {
-        @apply absolute top-[-47px] left-0 bg-transparent lg:rounded-br-[48px] rounded-br-[28px];
+        @apply absolute top-[-47px] left-0 bg-transparent lg:rounded-br-[48px] rounded-br-[28px] w-[48px] h-[48px] rotate-[90deg];
         content: "";
-        width: 48px;
-        height: 48px;
         box-shadow: 13px 21px 0px 13px #fff;
-        transform: rotate(90deg);
     }
     .shape::after,
     .shape-2::after {
@@ -152,8 +146,18 @@
     a:hover {
         @apply cursor-pointer;
     }
-
-
+    .content__container {
+        @apply inline-block overflow-hidden align-middle;
+        height: clamp(33px, 10vw, 92px);
+    }
+    .content__container__list {
+        @apply block;
+        animation: change 8s infinite;
+    }
+    .content__container__list__item {
+        @apply block m-0 p-0;
+        line-height: clamp(33px, 10vw, 92px);
+    }
 }
 body{
     font-family: 'GilroyRegular';
@@ -161,23 +165,6 @@ body{
 }
 
 
-
-.content__container {
-    display: inline-block;
-    height: clamp(33px, 10vw, 92px); /* height = one item */
-    overflow: hidden;
-    vertical-align: middle;
-}
-.content__container__list {
-    display: block;
-    animation: change 8s infinite;
-}
-.content__container__list__item {
-    display: block;
-    line-height: clamp(33px, 10vw, 92px);
-    margin: 0;
-    padding: 0;
-}
 
 @keyframes change {
     0%, 20% { transform: translateY(0); }
@@ -190,8 +177,7 @@ body{
 .card .top-section {
     margin-top: -1px;
     border-radius: 30px;
-    display: flex
-;
+    display: flex;
     flex-direction: column;
     background: #395BE6;
     position: relative;
@@ -230,7 +216,6 @@ body{
 }
 /*Animation statics section*/
 /*Animation statics section*/
-
 .border-btm {
     position: absolute;
     bottom: 0;
