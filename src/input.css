@@ -178,6 +178,21 @@
         background: rgba(255, 255, 255, 0);
         box-shadow: -5px -5px 0 2px #141414;
     }
+    .border-lft-animation {
+        @apply absolute top-0 h-full w-px bg-[#C4C4C4] opacity-100 3xl:left-[calc(1px+110px)] left-[calc(1px+60px)];
+    }
+    .border-rt-animation {
+        @apply absolute top-0 h-full w-px bg-[#C4C4C4] opacity-100 3xl:right-[calc(1px+110px)] right-[calc(1px+60px)];
+    }
+    .line {
+        @apply absolute top-0 w-[60px] h-[6px] bg-[#C3F55A] opacity-0 rotate-90 rounded-[5px] 3xl:left-[calc(1px+81px)] left-[calc(1px+31px)];
+    }
+    .line-rt {
+        @apply absolute top-0 w-[60px] h-[6px] rounded-[5px] bg-[#C3F55A] opacity-0 rotate-90 3xl:right-[calc(1px+81px)] right-[calc(1px+31px)];
+    }
+    .line-top {
+        @apply absolute top-0 w-[60px] h-[6px] bg-[#C3F55A] opacity-0 rounded-[5px] rotate-90 3xl:right-[calc(1px+26.2%)] right-[calc(1px+25.2%)];
+    }
 }
 body{
     font-family: 'GilroyRegular';
@@ -201,59 +216,18 @@ body{
     background: #C4C4C4;
     opacity: 1;
 }
-.border-lft-animation {
-    position: absolute;
-    left: calc(1px + 110px);
-    top: 0;
-    height: 100%;
-    width: 1px;
-    background: #C4C4C4;
-    opacity: 1;
-}
-.line {
-    position: absolute;
-    left: calc(1px + 96px);
-    top: 0;
-    width: 40px;
-    height: 6px;
-    background: #C3F55A;
-    opacity: 0;
-    transform: rotate(90deg);
-    border-radius: 5px;
-}
-
 .line-bottom {
     position: absolute;
-    bottom: 2px;
+    bottom: -2px;
     left: 0;
-    width: 40px;
+    width: 60px;
     height: 6px;
     background: #C3F55A;
     opacity: 0;
     border-radius: 5px;
 }
 /* Right border */
-.border-rt-animation {
-    position: absolute;
-    right: calc(1px + 110px);
-    top: 0;
-    height: 100%;
-    width: 1px;
-    background: #C4C4C4;
-    opacity: 1;
-}
 /* Right side line */
-.line-rt {
-    position: absolute;
-    right: calc(1px + 96px);
-    top: 0;
-    width: 40px;
-    height: 6px;
-    border-radius: 5px;
-    background: #C3F55A;
-    opacity: 0;
-    transform: rotate(90deg);
-}
 .border-top-animation {
     position: absolute;
     right: calc(1px + 27.7%);
@@ -264,17 +238,17 @@ body{
     opacity: 1;
 }
 
-.line-top {
-    position: absolute;
-    right: calc(1px + 27.7%);
-    top: 0;
-    width: 40px;
-    height: 6px;
-    background: #C3F55A;
-    opacity: 0;
-    border-radius: 5px;
-    transform: rotate(90deg);
-}
+/*.line-top {*/
+/*    position: absolute;*/
+/*    right: calc(1px + 26.2%);*/
+/*    top: 0;*/
+/*    width: 60px;*/
+/*    height: 6px;*/
+/*    background: #C3F55A;*/
+/*    opacity: 1;*/
+/*    border-radius: 5px;*/
+/*    transform: rotate(90deg);*/
+/*}*/
 
 /*Animation statics section*/
 /*Animation statics section*/
@@ -297,4 +271,10 @@ body{
 .white-header .glass-overlay,
 .white-header .glass-specular{
     display: none;
+}
+/**/
+.odometer.odometer-auto-theme .odometer-digit .odometer-digit-inner, .odometer.odometer-theme-default .odometer-digit .odometer-digit-inner{
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
 }
