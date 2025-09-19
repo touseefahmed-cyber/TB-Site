@@ -1,5 +1,24 @@
-// CURSOR
+//smooth scroll
+// Initialisiere Lenis für sanftes Scrollen
+const lenis = new Lenis({
+    lerp: 0.12, // Steuerung der Scroll-Glättung (je kleiner, desto langsamer)
+    smooth: true // Aktiviert das sanfte Scrollen
+});
 
+// Verbinde Lenis mit GSAPs Ticker (optional, wenn ScrollTrigger verwendet wird)
+lenis.on('scroll', ScrollTrigger.update);
+
+// Aktualisiert die Lenis-Animation mit jedem Frame
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
+
+requestAnimationFrame(raf);
+
+
+
+// CURSOR
 (function() {
     var mousePos;
     var moved = false;
