@@ -17,7 +17,6 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 
-
 // CURSOR
 (function() {
     var mousePos;
