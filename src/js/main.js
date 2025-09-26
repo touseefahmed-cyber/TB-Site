@@ -175,7 +175,8 @@ document.querySelectorAll('.odometer').forEach((odometerEl) => {
 //header White
 window.addEventListener('scroll', function() {
     const header = document.getElementById('header');
-    const content = document.getElementById('content');
+    const content = document.getElementsByClassName('content')[0]; // Use class name
+
     const contentRect = content.getBoundingClientRect();
 
     // Check if the header is overlapping with the content
@@ -184,4 +185,13 @@ window.addEventListener('scroll', function() {
     } else {
         header.classList.remove('white-header');
     }
+});
+//slider
+var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 3.1,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
 });

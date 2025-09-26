@@ -75,6 +75,7 @@
     --font-GilroyLight:GilroyLight;
     --font-ibrand:ibrand;
     --color-blue:#395BE6;
+    --color-main-blue:#4E63F6;
     --color-dark-gray:#141414;
     --color-light-gray:#F1F1F1;
     --color-silver-gray:#BCBCBC;
@@ -83,44 +84,18 @@
     --color-lime-green:#C3F55A;
 }
 @layer base {
-    h1 {
-        font-family: 'GilroyBold', sans-serif;
-        @apply text-[clamp(33px,5vw,75px)] leading-[clamp(33px,5vw,75px)];
-    }
-    h2 {
-        font-family: 'GilroyMedium', sans-serif;
-        @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
-    }
+    h1 { font-family: 'GilroyBold', sans-serif; @apply text-[clamp(33px,5vw,75px)] leading-[clamp(33px,5vw,75px)];}
+    h2 {font-family: 'GilroyMedium', sans-serif; @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;}
 }
 @layer components {
-    .glass-container {
-        @apply relative overflow-hidden transition-all duration-[400ms] ease-[cubic-bezier(0.175,0.885,0.32,2.2)];
-    }
-    .glass-filter {
-        @apply absolute inset-0 rounded-[inherit] z-0 backdrop-blur-[3px] saturate-[1.2] brightness-100;
-    }
-    .glass-overlay {
-        @apply absolute inset-0 rounded-[inherit] z-[1] bg-[rgb(178_178_178_/_30%)];
-    }
-    .glass-specular {
-        @apply absolute inset-0 rounded-[inherit] z-[2] shadow-[inset_1px_1px_0_#B3AAFF,inset_0_0_5px_rgb(197_195_255_/_50%)];
-    }
-    .glass-filter2 {
-        @apply absolute inset-0 rounded-[inherit] z-0 backdrop-blur-[6px] saturate-[1.2] brightness-100;
-    }
-
-    .glass-overlay2 {
-        @apply absolute inset-0 rounded-[inherit] z-[1] bg-[#FFFFFF1A];
-    }
-
-    .glass-specular2 {
-        @apply absolute inset-0 rounded-[inherit] z-[2] shadow-[inset_1px_1px_0_#FFFFFF40,inset_0_0_8px_#FFFFFF1A];
-    }
-
-    .heading {
-        font-family: 'GilroyMedium', sans-serif;
-        @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;
-    }
+    .glass-container { @apply relative overflow-hidden transition-all duration-[400ms] ease-[cubic-bezier(0.175,0.885,0.32,2.2)];}
+    .glass-filter {@apply absolute inset-0 rounded-[inherit] z-0 backdrop-blur-[3px] saturate-[1.2] brightness-100;}
+    .glass-overlay {@apply absolute inset-0 rounded-[inherit] z-[1] bg-[rgb(178_178_178_/_30%)];}
+    .glass-specular {@apply absolute inset-0 rounded-[inherit] z-[2] shadow-[inset_1px_1px_0_#B3AAFF,inset_0_0_5px_rgb(197_195_255_/_50%)];}
+    .glass-filter2 {@apply absolute inset-0 rounded-[inherit] z-0 backdrop-blur-[6px] saturate-[1.2] brightness-100;}
+    .glass-overlay2 {@apply absolute inset-0 rounded-[inherit] z-[1] bg-[#FFFFFF1A];}
+    .glass-specular2 {@apply absolute inset-0 rounded-[inherit] z-[2] shadow-[inset_1px_1px_0_#FFFFFF40,inset_0_0_8px_#FFFFFF1A] ;}
+    .heading {font-family: 'GilroyMedium', sans-serif;@apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;}
     .shape::before {
         @apply absolute top-[-47px] left-0 bg-transparent lg:rounded-br-[48px] rounded-br-[28px] w-[48px] h-[48px] rotate-[90deg];
         content: "";
@@ -174,6 +149,20 @@
     }
     .line-top {
         @apply absolute top-0 w-[80px] h-[5px] bg-[#C3F55A] opacity-0 rounded-[5px] rotate-90 3xl:right-[calc(1px+26.2%)] right-[calc(1px+25.2%)];
+    }
+    .mySwiper .swiper-wrapper .swiper-slide .curve-shape:after {
+        content: "";
+        box-shadow: 13px 21px 0px 13px #0F084B;
+        position: absolute;
+        top: -47px;
+        height: 48px;
+        width: 48px;
+        rotate: 90deg;
+        left: calc(4px * 0);
+        border-bottom-right-radius: 30px;
+    }
+    .mySwiper .swiper-wrapper .swiper-slide:nth-child(even) .curve-shape:after {
+        box-shadow: 13px 21px 0px 13px #4E63F6;
     }
 }
 body{
@@ -262,3 +251,6 @@ body{
 }
 
 /*Today’s progress: completed responsiveness for two sections.*/
+.swiper-navigation-icon{
+    display: none; /* or display: none; */
+}
