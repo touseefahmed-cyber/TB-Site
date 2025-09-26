@@ -158,26 +158,8 @@
         @apply block m-0 p-0;
         line-height: clamp(33px, 10vw, 92px);
     }
-    .card .top-section {
-        @apply -mt-[1px] rounded-[30px] flex flex-col relative bg-[#395BE6];
-    }
-    .card .top-section::before {
-        content: "";
-        @apply absolute sm:top-[150px] top-[88px] left-0 h-[55px] w-[55px] rounded-tl-[22px] z-[9];
-        background: rgba(255, 255, 255, 0);
-        box-shadow: -5px -5px 0 2px #141414;
-    }
-    .card .top-section .border-shape {
-        @apply absolute sm:h-[150px] sm:w-[160px] w-[90px] h-[90px] rounded-br-[30px] bg-[#141414];
-        transform: skew(-20deg);
-        box-shadow: -10px -10px 0 0 #141414;
-    }
-    .card .top-section .border-shape::before {
-        content: "";
-        @apply absolute top-0 -right-[55px] h-[55px] w-[55px] rounded-tl-[22px] z-[9];
-        background: rgba(255, 255, 255, 0);
-        box-shadow: -5px -5px 0 2px #141414;
-    }
+
+
     .border-lft-animation {
         @apply absolute top-0 h-full w-px bg-[#C4C4C4] opacity-100 3xl:left-[calc(1px+110px)] left-[calc(1px+60px)];
     }
@@ -185,13 +167,13 @@
         @apply absolute top-0 h-full w-px bg-[#C4C4C4] opacity-100 3xl:right-[calc(1px+110px)] right-[calc(1px+60px)];
     }
     .line {
-        @apply absolute top-0 w-[60px] h-[6px] bg-[#C3F55A] opacity-0 rotate-90 rounded-[5px] 3xl:left-[calc(1px+81px)] left-[calc(1px+31px)];
+        @apply absolute top-0 w-[80px] h-[5px] bg-[#C3F55A] opacity-0 rotate-90 rounded-[5px] 3xl:left-[calc(1px+81px)] left-[calc(1px+31px)];
     }
     .line-rt {
-        @apply absolute top-0 w-[60px] h-[6px] rounded-[5px] bg-[#C3F55A] opacity-0 rotate-90 3xl:right-[calc(1px+81px)] right-[calc(1px+31px)];
+        @apply absolute top-0 w-[80px] h-[5px] rounded-[5px] bg-[#C3F55A] opacity-0 rotate-90 3xl:right-[calc(1px+81px)] right-[calc(1px+31px)];
     }
     .line-top {
-        @apply absolute top-0 w-[60px] h-[6px] bg-[#C3F55A] opacity-0 rounded-[5px] rotate-90 3xl:right-[calc(1px+26.2%)] right-[calc(1px+25.2%)];
+        @apply absolute top-0 w-[80px] h-[5px] bg-[#C3F55A] opacity-0 rounded-[5px] rotate-90 3xl:right-[calc(1px+26.2%)] right-[calc(1px+25.2%)];
     }
 }
 body{
@@ -220,8 +202,8 @@ body{
     position: absolute;
     bottom: -2px;
     left: 0;
-    width: 60px;
-    height: 6px;
+    width: 80px;
+    height: 5px;
     background: #C3F55A;
     opacity: 0;
     border-radius: 5px;
