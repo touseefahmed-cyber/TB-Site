@@ -92,9 +92,9 @@
     .glass-filter {@apply absolute inset-0 rounded-[inherit] z-0 backdrop-blur-[3px] saturate-[1.2] brightness-100;}
     .glass-overlay {@apply absolute inset-0 rounded-[inherit] z-[1] bg-[rgb(178_178_178_/_30%)];}
     .glass-specular {@apply absolute inset-0 rounded-[inherit] z-[2] shadow-[inset_1px_1px_0_#B3AAFF,inset_0_0_5px_rgb(197_195_255_/_50%)];}
-    .glass-filter2 {@apply absolute inset-0 rounded-[inherit] z-0 backdrop-blur-[6px] saturate-[1.2] brightness-100;}
-    .glass-overlay2 {@apply absolute inset-0 rounded-[inherit] z-[1] bg-[#FFFFFF1A];}
-    .glass-specular2 {@apply absolute inset-0 rounded-[inherit] z-[2] shadow-[inset_1px_1px_0_#FFFFFF40,inset_0_0_8px_#FFFFFF1A] ;}
+    .glass-filter2 {@apply absolute inset-0 rounded-[inherit] z-0 backdrop-blur-[10px] saturate-[1.2] brightness-100;}
+    .glass-overlay2 {@apply absolute inset-0 rounded-[inherit] z-[1] bg-[#ffffff1a];}
+    .glass-specular2 {@apply absolute inset-0 rounded-[inherit] z-[2] shadow-[inset_1px_1px_0_#ffffff1a,inset_0_0_8px_#ffffff1a] ;}
     .heading {font-family: 'GilroyMedium', sans-serif;@apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;}
     .shape::before {
         @apply absolute top-[-47px] left-0 bg-transparent lg:rounded-br-[48px] rounded-br-[28px] w-[48px] h-[48px] rotate-[90deg];
@@ -253,4 +253,7 @@ body{
 /*Today’s progress: completed responsiveness for two sections.*/
 .swiper-navigation-icon{
     display: none; /* or display: none; */
+}
+html{
+    scroll-behavior: smooth;
 }

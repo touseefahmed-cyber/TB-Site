@@ -173,19 +173,28 @@ document.querySelectorAll('.odometer').forEach((odometerEl) => {
     createOdometer(odometerEl);
 });
 //header White
-window.addEventListener('scroll', function() {
+(function () {
     const header = document.getElementById('header');
-    const content = document.getElementsByClassName('content')[0]; // Use class name
+    if (!header) return;
 
-    const contentRect = content.getBoundingClientRect();
+    function updateHeader() {
+        const hb = header.getBoundingClientRect();
+        // 1px below the header, centered horizontally
+        const x = Math.floor(window.innerWidth / 2);
+        const y = Math.min(window.innerHeight - 1, hb.bottom + 1);
 
-    // Check if the header is overlapping with the content
-    if (contentRect.top <= header.offsetHeight) {
-        header.classList.add('white-header');
-    } else {
-        header.classList.remove('white-header');
+        const el = document.elementFromPoint(x, y);
+        const inContent = el && el.closest('.content'); // is the area under header inside .content?
+
+        header.classList.toggle('white-header', !!inContent);
     }
-});
+
+    window.addEventListener('scroll', updateHeader, { passive: true });
+    window.addEventListener('resize', updateHeader);
+    document.addEventListener('DOMContentLoaded', updateHeader);
+})();
+
+
 //slider
 var swiper = new Swiper(".mySwiper", {
     slidesPerView: 3.1,
@@ -194,4 +203,20 @@ var swiper = new Swiper(".mySwiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+});
+const backToTopButton = document.getElementById("backToTop");
+
+window.onscroll = function() {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopButton.classList.add("show");
+    } else {
+        backToTopButton.classList.remove("show");
+    }
+};
+
+backToTopButton.addEventListener("click", function() {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
 });
