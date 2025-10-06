@@ -235,7 +235,7 @@ body{
     color: #131313;
 }
 .white-header  .glass-container{
-    background: #B2B2B24D;
+    background: rgb(178 178 178 / 40%);
     border: 1px solid #B3AAFF;
 }
 .white-header .glass-filter,

@@ -231,14 +231,29 @@
   .top-20 {
     top: calc(var(--spacing) * 20);
   }
+  .top-\[-50px\] {
+    top: -50px;
+  }
+  .top-\[-142px\] {
+    top: -142px;
+  }
   .right-0 {
     right: calc(var(--spacing) * 0);
+  }
+  .right-\[-220px\] {
+    right: -220px;
   }
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }
+  .bottom-\[-175px\] {
+    bottom: -175px;
+  }
   .left-1\/2 {
     left: calc(1/2 * 100%);
+  }
+  .left-\[-396px\] {
+    left: -396px;
   }
   .-z-20 {
     z-index: calc(20 * -1);
@@ -276,6 +291,9 @@
   .mt-3 {
     margin-top: calc(var(--spacing) * 3);
   }
+  .mt-\[-72px\] {
+    margin-top: -72px;
+  }
   .mt-\[11px\] {
     margin-top: 11px;
   }
@@ -297,6 +315,9 @@
   .mb-\[-1px\] {
     margin-bottom: -1px;
   }
+  .mb-\[9px\] {
+    margin-bottom: 9px;
+  }
   .mb-\[10px\] {
     margin-bottom: 10px;
   }
@@ -314,6 +335,9 @@
   }
   .mb-\[30px\] {
     margin-bottom: 30px;
+  }
+  .mb-\[60px\] {
+    margin-bottom: 60px;
   }
   .mb-\[300px\] {
     margin-bottom: 300px;
@@ -395,6 +419,9 @@
   }
   .w-\[34px\] {
     width: 34px;
+  }
+  .w-\[41\%\] {
+    width: 41%;
   }
   .w-\[45\.9\%\] {
     width: 45.9%;
@@ -482,11 +509,21 @@
   .gap-\[40px\] {
     gap: 40px;
   }
+  .gap-\[100px\] {
+    gap: 100px;
+  }
   .space-y-\[11px\] {
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;
       margin-block-start: calc(11px * var(--tw-space-y-reverse));
       margin-block-end: calc(11px * calc(1 - var(--tw-space-y-reverse)));
+    }
+  }
+  .space-y-\[44px\] {
+    :where(& > :not(:last-child)) {
+      --tw-space-y-reverse: 0;
+      margin-block-start: calc(44px * var(--tw-space-y-reverse));
+      margin-block-end: calc(44px * calc(1 - var(--tw-space-y-reverse)));
     }
   }
   .gap-y-\[50px\] {
@@ -528,8 +565,26 @@
   .rounded-tl-\[30px\] {
     border-top-left-radius: 30px;
   }
+  .rounded-tl-\[50px\] {
+    border-top-left-radius: 50px;
+  }
+  .rounded-tl-\[70px\] {
+    border-top-left-radius: 70px;
+  }
   .rounded-tr-\[30px\] {
     border-top-right-radius: 30px;
+  }
+  .rounded-tr-\[50px\] {
+    border-top-right-radius: 50px;
+  }
+  .rounded-tr-\[70px\] {
+    border-top-right-radius: 70px;
+  }
+  .rounded-br-\[70px\] {
+    border-bottom-right-radius: 70px;
+  }
+  .rounded-bl-\[70px\] {
+    border-bottom-left-radius: 70px;
   }
   .border {
     border-style: var(--tw-border-style);
@@ -568,6 +623,9 @@
   }
   .bg-light-gray {
     background-color: var(--color-light-gray);
+  }
+  .bg-lime-green {
+    background-color: var(--color-lime-green);
   }
   .bg-main-blue {
     background-color: var(--color-main-blue);
@@ -620,8 +678,14 @@
   .p-\[19px_32px_18px_33px\] {
     padding: 19px 32px 18px 33px;
   }
+  .p-\[45px\] {
+    padding: 45px;
+  }
   .p-\[70px_76px_0\] {
     padding: 70px 76px 0;
+  }
+  .p-\[76px_80px_134px\] {
+    padding: 76px 80px 134px;
   }
   .p-\[145px_76px_76px\] {
     padding: 145px 76px 76px;
@@ -641,6 +705,12 @@
   .px-\[32px\] {
     padding-inline: 32px;
   }
+  .px-\[40px\] {
+    padding-inline: 40px;
+  }
+  .px-\[60px\] {
+    padding-inline: 60px;
+  }
   .px-\[80px\] {
     padding-inline: 80px;
   }
@@ -659,6 +729,12 @@
   .py-\[28px\] {
     padding-block: 28px;
   }
+  .py-\[45px\] {
+    padding-block: 45px;
+  }
+  .py-\[55px\] {
+    padding-block: 55px;
+  }
   .pt-5 {
     padding-top: calc(var(--spacing) * 5);
   }
@@ -676,6 +752,9 @@
   }
   .pt-\[210px\] {
     padding-top: 210px;
+  }
+  .pt-\[390px\] {
+    padding-top: 390px;
   }
   .pr-\[6px\] {
     padding-right: 6px;
@@ -700,6 +779,9 @@
   }
   .pb-\[80px\] {
     padding-bottom: 80px;
+  }
+  .pb-\[310px\] {
+    padding-bottom: 310px;
   }
   .pl-\[32px\] {
     padding-left: 32px;
@@ -769,6 +851,9 @@
   .text-\[58px\] {
     font-size: 58px;
   }
+  .text-\[62px\] {
+    font-size: 62px;
+  }
   .text-\[150px\] {
     font-size: 150px;
   }
@@ -817,9 +902,17 @@
     --tw-leading: 40px;
     line-height: 40px;
   }
+  .leading-\[45px\] {
+    --tw-leading: 45px;
+    line-height: 45px;
+  }
   .leading-\[58px\] {
     --tw-leading: 58px;
     line-height: 58px;
+  }
+  .leading-\[75px\] {
+    --tw-leading: 75px;
+    line-height: 75px;
   }
   .leading-\[150px\] {
     --tw-leading: 150px;
@@ -1942,7 +2035,7 @@ body {
   color: #131313;
 }
 .white-header .glass-container {
-  background: #B2B2B24D;
+  background: rgb(178 178 178 / 40%);
   border: 1px solid #B3AAFF;
 }
 .white-header .glass-filter, .white-header .glass-overlay, .white-header .glass-specular {
