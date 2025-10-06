@@ -276,46 +276,45 @@ html{
     justify-content: space-between;
     align-items: center;
 }
-
 .faq-question .icon {
     transition: transform 0.3s ease;
     font-weight: bold;
     font-size: 1.2rem;
 }
-
 .faq-answer {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.4s ease, padding 0.3s ease;
     padding: 0 0;
 }
-
-.faq-answer p {
-    margin: 10px 0;
-}
-.faq-item.active{
+.faq-item.faq-active{
     background: var(--color-main-blue);
 }
-.faq-item.active .faq-question{
+.faq-item.faq-active .faq-question{
     color: #fff;
 }
-
-
 .arrow-icon {
     bottom: 30px;
     left: 30px;
     position: absolute;
 }
-.faq-item.active .arrow-icon{
+.faq-item.faq-active .arrow-icon{
     left: auto;
     right: 30px;
 }
 .big-arrow{
     display: none;
 }
-.faq-item.active .arrow-icon .small-arrow{
+.faq-item.faq-active .arrow-icon .small-arrow{
     display: none;
 }
-.faq-item.active .arrow-icon .big-arrow{
+.faq-item.faq-active .arrow-icon .big-arrow{
     display: block;
+}
+.faq-slider .swiper-slide {
+    flex: 0 0 20%; /* 25% width */
+}
+
+.faq-slider .swiper-slide.faq-active {
+    flex: 0 0 29%; /* First slide 40% */
 }

@@ -230,17 +230,26 @@ faqItems.forEach(item => {
         // close other items
         faqItems.forEach(i => {
             if (i !== item) {
-                i.classList.remove("active");
+                i.classList.remove("faq-active");
                 const iIcon = i.querySelector(".icon");
                 if (iIcon) iIcon.textContent = "+";
             }
         });
 
         // toggle current item
-        item.classList.toggle("active");
+        item.classList.toggle("faq-active");
 
         const icon = item.querySelector(".icon");
-        if (icon) icon.textContent = item.classList.contains("active") ? "–" : "+";
+        if (icon) icon.textContent = item.classList.contains("faq-active") ? "–" : "+";
     });
 });
 
+//slider
+var swiper = new Swiper(".faq-slider", {
+    slidesPerView: "auto",
+    spaceBetween: 16,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+});
