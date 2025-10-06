@@ -136,9 +136,9 @@ gsap.utils.toArray(".panel").forEach((panel, i) => {
 });
 
 
-ScrollTrigger.create({
-    snap: 1 / 4 // snap whole page to the closest section!
-});
+// ScrollTrigger.create({
+//     snap: 1 / 4 // snap whole page to the closest section!
+// });
 //count js
 const createOdometer = (el) => {
     const value = parseInt(el.getAttribute('data-value'));
