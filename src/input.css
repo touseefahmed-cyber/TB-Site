@@ -325,3 +325,28 @@ html{
     left: 0;
     pointer-events: none; /* so it won't block mouse events */
 }
+.swiper-button-next, .swiper-button-prev {
+    &.swiper-button-disabled {
+        cursor: pointer;
+        opacity: 1;
+        pointer-events: all;
+    }
+}
+.arrow_btn .swiper_btn {
+    width: 120px;
+    border-radius: 30px;
+    transition: all 0.5s
+    ease-in-out;
+    height: 60px;
+}
+.arrow_btn .swiper_btn:hover{
+    width: 180px;
+}
+.arrow_btn .swiper_btn:hover + div,.arrow_btn .swiper-button-prev:has(+ .swiper-button-next:hover){
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.arrow_btn .swiper_btn:hover i{
+    font-size: 30px;
+}
