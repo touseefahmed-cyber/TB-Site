@@ -367,6 +367,9 @@
   .ml-\[24px\] {
     margin-left: 24px;
   }
+  .ml-auto {
+    margin-left: auto;
+  }
   .block {
     display: block;
   }
@@ -456,6 +459,9 @@
   }
   .w-\[380px\] {
     width: 380px;
+  }
+  .w-fit {
+    width: fit-content;
   }
   .w-full {
     width: 100%;
@@ -1303,6 +1309,13 @@
     &:hover {
       @media (hover: hover) {
         background-color: var(--color-red-500);
+      }
+    }
+  }
+  .hover\:text-dark-gray {
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-dark-gray);
       }
     }
   }
