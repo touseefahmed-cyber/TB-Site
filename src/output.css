@@ -35,7 +35,6 @@
     --radius-lg: 0.5rem;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
-    --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-transition-duration: 150ms;
     --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -306,6 +305,9 @@
   .mt-\[120px\] {
     margin-top: 120px;
   }
+  .mt-\[390px\] {
+    margin-top: 390px;
+  }
   .mr-\[20px\] {
     margin-right: 20px;
   }
@@ -327,9 +329,6 @@
   .mb-\[11px\] {
     margin-bottom: 11px;
   }
-  .mb-\[20px\] {
-    margin-bottom: 20px;
-  }
   .mb-\[22px\] {
     margin-bottom: 22px;
   }
@@ -350,6 +349,9 @@
   }
   .mb-\[300px\] {
     margin-bottom: 300px;
+  }
+  .mb-\[310px\] {
+    margin-bottom: 310px;
   }
   .ml-\[-6px\] {
     margin-left: -6px;
@@ -678,9 +680,6 @@
   .p-4 {
     padding: calc(var(--spacing) * 4);
   }
-  .p-\[6px_64px_6px_65px\] {
-    padding: 6px 64px 6px 65px;
-  }
   .p-\[12px_33px_13px_32px\] {
     padding: 12px 33px 13px 32px;
   }
@@ -966,9 +965,6 @@
   }
   .text-\[\#646464\] {
     color: #646464;
-  }
-  .text-\[\#1414141a\] {
-    color: #1414141a;
   }
   .text-\[\#B0B0B0\] {
     color: #B0B0B0;
@@ -1417,11 +1413,6 @@
   .lg\:block {
     @media (width >= 1024px) {
       display: block;
-    }
-  }
-  .lg\:hidden {
-    @media (width >= 1024px) {
-      display: none;
     }
   }
   .lg\:inline-block {
@@ -1895,17 +1886,15 @@
     pointer-events: none;
     position: absolute;
     z-index: 20;
-    height: 15px;
-    width: 15px;
+    display: flex;
+    height: 20px;
+    width: 20px;
+    align-items: center;
+    justify-content: center;
     border-radius: calc(infinity * 1px);
     background-color: var(--color-dark-gray);
-    transition-property: all;
-    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
-    transition-duration: var(--tw-duration, var(--default-transition-duration));
-    --tw-duration: 200ms;
-    transition-duration: 200ms;
-    --tw-ease: var(--ease-in-out);
-    transition-timing-function: var(--ease-in-out);
+    font-size: 14px;
+    color: var(--color-white);
   }
   a:hover {
     cursor: pointer;
@@ -2141,6 +2130,12 @@ html {
 }
 .faq-slider .swiper-slide.faq-active {
   flex: 0 0 29%;
+}
+#cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }
 @property --tw-translate-x {
   syntax: "*";

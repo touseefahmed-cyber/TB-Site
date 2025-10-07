@@ -17,56 +17,6 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 
-// CURSOR
-(function() {
-    var mousePos;
-    var moved = false;
-
-    document.onmousemove = handleMouseMove;
-    setInterval(getMousePosition, 100);
-
-    function handleMouseMove(event) {
-        var dot, eventDoc, doc, body, pageX, pageY;
-
-        moved = true;
-
-        event = event || window.event;
-        if (event.pageX == null && event.clientX != null) {
-            eventDoc = (event.target && event.target.ownerDocument) || document;
-            doc = eventDoc.documentElement;
-            body = eventDoc.body;
-
-            event.pageX = event.clientX +
-                (doc && doc.scrollLeft || body && body.scrollLeft || 0) -
-                (doc && doc.clientLeft || body && body.clientLeft || 0);
-            event.pageY = event.clientY +
-                (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
-                (doc && doc.clientTop  || body && body.clientTop  || 0 );
-        }
-
-        mousePos = {
-            x: event.pageX,
-            y: event.pageY
-        };
-    }
-    function getMousePosition() {
-        var pos = mousePos;
-
-        if (!pos) {
-            // We haven't seen any movement yet
-        }
-        else if(moved === true) {
-            // Use pos.x and pos.y
-            console.log("Pos:", pos.x, pos.y);
-            moved = false;
-            cursor = document.querySelector('#cursor');
-            cursor.style.left = (pos.x -5) + 'px' ;
-            cursor.style.top = (pos.y -5) + 'px';
-
-        }
-    }
-})();
-//
 //Animation statics section\
 gsap.registerPlugin(ScrollTrigger);
 
@@ -243,8 +193,7 @@ faqItems.forEach(item => {
         if (icon) icon.textContent = item.classList.contains("faq-active") ? "–" : "+";
     });
 });
-
-//slider
+//Faq slider
 var swiper = new Swiper(".faq-slider", {
     slidesPerView: "auto",
     spaceBetween: 16,
@@ -252,4 +201,42 @@ var swiper = new Swiper(".faq-slider", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+});
+//slider
+var cursor = document.querySelector("#cursor");
+document.body.addEventListener("mousemove", function(e) {
+    gsap.to(cursor, {
+        x: e.x,
+        y: e.y,
+    });
+});
+
+const sliders = document.querySelectorAll(".slider");
+
+sliders.forEach(slider => {
+    // When mouse enters sidebar (slider), scale up
+    slider.addEventListener("mouseenter", function () {
+        slider.style.cursor = "none";
+        cursor.style.width = "60px";
+        cursor.style.height = "60px";
+        cursor.innerHTML = "Drag";
+
+        gsap.to(cursor, {
+            duration: 0.2,
+            scale: 1 // or scale: 2
+        });
+    });
+
+    // When mouse leaves sidebar (slider), scale back to normal
+    slider.addEventListener("mouseleave", function () {
+        slider.style.cursor = "auto";
+        cursor.style.width = "20px";
+        cursor.style.height = "20px";
+        cursor.innerHTML = "";
+
+        gsap.to(cursor, {
+            scale: 1,
+            duration: 0.2,
+        });
+    });
 });
