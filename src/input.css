@@ -127,7 +127,7 @@
     }
     .content__container__list {
         @apply block;
-        animation: change 8s infinite;
+        animation: change 8s infinite ease-in-out;
     }
     .content__container__list__item {
         @apply block m-0 p-0;
@@ -168,11 +168,13 @@ body{
     color: #141414;
 }
 @keyframes change {
-    0%, 20% { transform: translateY(0); }
-    25%, 45% { transform: translateY(calc(-1 * clamp(33px, 10vw, 92px))); }
-    50%, 70% { transform: translateY(calc(-2 * clamp(33px, 10vw, 92px))); }
-    75%, 95% { transform: translateY(calc(-3 * clamp(33px, 10vw, 92px))); }
-    100% { transform: translateY(0); }
+    0%, 10% { transform: translateY(0); }
+    15%, 25% { transform: translateY(calc(-1 * clamp(33px, 10vw, 92px))); }
+    30%, 40% { transform: translateY(calc(-2 * clamp(33px, 10vw, 92px))); }
+    45%, 55% { transform: translateY(calc(-3 * clamp(33px, 10vw, 92px))); }
+    60%, 70% { transform: translateY(calc(-4 * clamp(33px, 10vw, 92px))); }
+    75%, 85% { transform: translateY(calc(-5 * clamp(33px, 10vw, 92px))); }
+    90%, 100% { transform: translateY(0); }
 }
 /*Animation statics section*/
 /*Animation statics section*/
@@ -235,6 +237,7 @@ body{
 .white-header  .glass-container{
     background: rgb(178 178 178 / 40%);
     border: 1px solid #B3AAFF;
+    transition: all 0.5s ease-in-out;
 }
 .white-header .glass-filter,
 .white-header .glass-overlay,

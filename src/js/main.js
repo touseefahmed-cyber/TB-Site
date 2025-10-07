@@ -225,6 +225,33 @@ document.body.addEventListener("mousemove", function(e) {
 });
 
 const sliders = document.querySelectorAll(".slider");
+const modelBoxes = document.querySelectorAll(".model-box");
+
+modelBoxes.forEach((box) => {
+    box.addEventListener("mouseenter", function () {
+        box.style.cursor = "auto";
+        cursor.style.width = "20px";
+        cursor.style.height = "20px";
+        cursor.innerHTML = "";
+
+        gsap.to(cursor, {
+            duration: 0.2,
+            scale: 1, // or change to 2 if you want to enlarge
+        });
+    });
+    box.addEventListener("mouseleave", function () {
+        box.style.cursor = "auto";
+        cursor.style.width = "20px";
+        cursor.style.height = "20px";
+        cursor.innerHTML = "";
+
+        gsap.to(cursor, {
+            scale: 1,
+            duration: 0.2,
+        });
+    });
+});
+
 
 sliders.forEach(slider => {
     // When mouse enters sidebar (slider), scale up
