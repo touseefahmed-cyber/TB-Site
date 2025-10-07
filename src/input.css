@@ -133,8 +133,6 @@
         @apply block m-0 p-0;
         line-height: clamp(33px, 10vw, 92px);
     }
-
-
     .border-lft-animation {
         @apply absolute top-0 h-full w-px bg-[#C4C4C4] opacity-100 3xl:left-[calc(1px+110px)] left-[calc(1px+60px)];
     }

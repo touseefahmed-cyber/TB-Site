@@ -1,0 +1,6 @@
+<footer class="bg-dark-gray ">
+    <div class=" p-[145px_76px_76px] flex justify-between relative">
+        <div class="border-btm lg:block hidden"></div>
+        <div class="line-bottom lg:block hidden"></div>
+    </div>
+</footer>

@@ -419,9 +419,6 @@
   .min-h-full {
     min-height: 100%;
   }
-  .\!w-\[120px\] {
-    width: 120px !important;
-  }
   .w-\[24\%\] {
     width: 24%;
   }
@@ -754,6 +751,9 @@
   }
   .pt-\[40px\] {
     padding-top: 40px;
+  }
+  .pt-\[145px\] {
+    padding-top: 145px;
   }
   .pt-\[200px\] {
     padding-top: 200px;

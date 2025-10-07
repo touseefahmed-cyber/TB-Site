@@ -18,61 +18,74 @@ requestAnimationFrame(raf);
 
 
 //Animation statics section\
+// make sure GSAP + ScrollTrigger are loaded on the page BEFORE this script runs
 gsap.registerPlugin(ScrollTrigger);
 
-const borderLeft = document.querySelector('.border-lft-animation');
-const borderBottom = document.querySelector('.border-btm');
-const borderTop = document.querySelector('.border-top-animation');
-const borderRt = document.querySelector('.border-rt-animation');
-const line = document.querySelector('.line');
-const lineBottom = document.querySelector('.line-bottom');
-const lineTop = document.querySelector('.line-top');
-const lineRt = document.querySelector('.line-rt');
+document.querySelectorAll('.line-animation').forEach(section => {
+    // find elements inside THIS section
+    const borderLeft  = section.querySelector('.border-lft-animation');
+    const borderBottom= section.querySelector('.border-btm');
+    const borderTop   = section.querySelector('.border-top-animation');
+    const borderRt    = section.querySelector('.border-rt-animation');
 
-function animateCycle() {
-    const tl = gsap.timeline({
-        repeat: -1,
-        repeatDelay: 0.5,
-        scrollTrigger: {
-            trigger: ".your-section",   // 👈 replace with your section/class
-            start: "top 80%",           // when section top hits 80% viewport
-            toggleActions: "play none none reverse"
-        }
-    });
+    const line        = section.querySelector('.line');
+    const lineBottom  = section.querySelector('.line-bottom');
+    const lineTop     = section.querySelector('.line-top');
+    const lineRt      = section.querySelector('.line-rt');
 
-    // 1. Borders fade out
-    tl.to([borderLeft, borderBottom, borderTop, borderRt], { opacity: 0, duration: 0.8 });
+    // arrays of existing elements (so we won't pass nulls to GSAP)
+    const borders = [borderLeft, borderBottom, borderTop, borderRt].filter(Boolean);
+    const lines = [line, lineBottom, lineTop, lineRt].filter(Boolean);
 
-    // 2. Forward animation
-    tl.to(line, { opacity: 1, top: "100%", duration: 3, ease: "power1.inOut" }, ">");
-    tl.to(lineBottom, { opacity: 1, left: "100%", duration: 3, ease: "power1.inOut" }, "<");
-    tl.to(lineTop, { opacity: 1, top: "100%", duration: 3, ease: "power1.inOut" }, "<");
-    tl.to(lineRt, { opacity: 1, top: "100%", duration: 3, ease: "power1.inOut" }, "<");
+    // nothing to animate in this section? skip it.
+    if (borders.length === 0 && lines.length === 0) return;
 
-    // 3. Hide lines
-    tl.to([line, lineBottom, lineTop, lineRt], { opacity: 0, duration: 0.5 }, "+=0.2");
+    function animateCycle() {
+        const tl = gsap.timeline({
+            repeat: -1,
+            repeatDelay: 0.5,
+            scrollTrigger: {
+                trigger: section,
+                start: "top 80%",
+                toggleActions: "play none none reverse"
+            }
+        });
 
-    // 4. Borders fade in briefly
-    tl.to([borderLeft, borderBottom, borderTop, borderRt], { opacity: 1, duration: 0.8 });
-    tl.to({}, { duration: 1 });
+        // 1. Borders fade out
+        tl.to(borders, { opacity: 0, duration: 0.8 });
 
-    // 5. Borders fade out
-    tl.to([borderLeft, borderBottom, borderTop, borderRt], { opacity: 0, duration: 0.5 });
+        // 2. Forward animation (only animate elements that exist)
+        if (line)       tl.to(line,       { opacity: 1, top: "100%", duration: 3, ease: "power1.inOut" }, ">");
+        if (lineBottom) tl.to(lineBottom, { opacity: 1, left: "100%", duration: 3, ease: "power1.inOut" }, "<");
+        if (lineTop)    tl.to(lineTop,    { opacity: 1, top: "100%", duration: 3, ease: "power1.inOut" }, "<");
+        if (lineRt)     tl.to(lineRt,     { opacity: 1, top: "100%", duration: 3, ease: "power1.inOut" }, "<");
 
-    // 6. Reverse animation
-    tl.to(line, { opacity: 1, top: "0px", duration: 2, ease: "power1.inOut" }, ">");
-    tl.to(lineBottom, { opacity: 1, left: "0%", duration: 2, ease: "power1.inOut" }, "<");
-    tl.to(lineTop, { opacity: 1, top: "0px", duration: 2, ease: "power1.inOut" }, "<");
-    tl.to(lineRt, { opacity: 1, top: "0%", duration: 2, ease: "power1.inOut" }, "<");
+        // 3. Hide lines
+        tl.to(lines, { opacity: 0, duration: 0.5 }, "+=0.2");
 
-    // 7. Hide lines
-    tl.to([line, lineBottom, lineTop, lineRt], { opacity: 0, duration: 0.5 }, "+=0.2");
+        // 4. Borders fade in briefly
+        tl.to(borders, { opacity: 1, duration: 0.8 });
+        tl.to({}, { duration: 1 });
 
-    // 8. Borders fade in ready for next cycle
-    tl.to([borderLeft, borderBottom, borderTop, borderRt], { opacity: 1, duration: 0.8 });
-}
+        // 5. Borders fade out
+        tl.to(borders, { opacity: 0, duration: 0.5 });
 
-animateCycle();
+        // 6. Reverse animation
+        if (line)       tl.to(line,       { opacity: 1, top: "0px", duration: 2, ease: "power1.inOut" }, ">");
+        if (lineBottom) tl.to(lineBottom, { opacity: 1, left: "0%", duration: 2, ease: "power1.inOut" }, "<");
+        if (lineTop)    tl.to(lineTop,    { opacity: 1, top: "0px", duration: 2, ease: "power1.inOut" }, "<");
+        if (lineRt)     tl.to(lineRt,     { opacity: 1, top: "0%", duration: 2, ease: "power1.inOut" }, "<");
+
+        // 7. Hide lines
+        tl.to(lines, { opacity: 0, duration: 0.5 }, "+=0.2");
+
+        // 8. Borders fade in ready for next cycle
+        tl.to(borders, { opacity: 1, duration: 0.8 });
+    }
+
+    animateCycle();
+});
+
 //paralex Effect
 gsap.registerPlugin(ScrollTrigger);
 
