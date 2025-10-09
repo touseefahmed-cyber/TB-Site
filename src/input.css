@@ -84,7 +84,7 @@
     --color-lime-green:#C3F55A;
 }
 @layer base {
-    h1 { font-family: 'GilroyBold', sans-serif; @apply text-[clamp(33px,5vw,75px)] leading-[clamp(33px,5vw,75px)];}
+    h1 { font-family: 'GilroyBold', sans-serif; @apply text-[clamp(33px,4vw,75px)] leading-[clamp(33px,5vw,75px)];}
     h2 {font-family: 'GilroyMedium', sans-serif; @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;}
 }
 @layer components {
