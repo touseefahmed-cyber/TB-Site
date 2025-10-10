@@ -295,16 +295,19 @@ html{
 
 /*Header*/
 #header{
-    transition: all 0.3s ease-in-out;
 }
 .scroll-down #header{
-    transform: translateY(-100%);
+    transition: all 0.5s ease-in-out;
+    transform: translateY(-130%);
+    position: fixed;
+    top: 0;
 }
 .scroll-up #header{
     transform: translateY(0);
     position: fixed;
     background: #fff;
     top: 0;
+    transition: all 0.5s ease-in-out;
 }
 .scroll-up #header img{
     filter: invert(56%) sepia(59%) saturate(20%) hue-rotate(44deg) brightness(6%) contrast(90%);
