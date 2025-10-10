@@ -241,9 +241,9 @@ modelBoxes.forEach((box) => {
     });
     box.addEventListener("mouseleave", function () {
         box.style.cursor = "auto";
-        cursor.style.width = "20px";
-        cursor.style.height = "20px";
-        cursor.innerHTML = "";
+        cursor.style.width = "60px";
+        cursor.style.height = "60px";
+        cursor.innerHTML = "Drag";
 
         gsap.to(cursor, {
             scale: 1,
