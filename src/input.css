@@ -224,16 +224,8 @@ body{
 /*Animation statics section*/
 /*Animation statics section*/
 /*white Header*/
-.white-header img{
-    filter: invert(56%) sepia(59%) saturate(20%) hue-rotate(44deg) brightness(6%) contrast(90%);
-}
-.white-header .hire_btn{
-    color: white;
-    background: var(--color-blue);
-}
-.white-header ul li a{
-    color: #131313;
-}
+
+
 .white-header  .glass-container{
     background: rgb(178 178 178 / 40%);
     border: 1px solid #B3AAFF;
@@ -350,4 +342,26 @@ html{
 }
 .arrow_btn .swiper_btn:hover i{
     font-size: 30px;
+}
+#header{
+    transition: all 0.5s ease-in-out;
+}
+.scroll-down #header{
+    transform: translateY(-100%);
+}
+.scroll-up #header{
+    transform: translateY(0);
+    position: fixed;
+    background: #fff;
+    top: 0;
+}
+.scroll-up #header img{
+    filter: invert(56%) sepia(59%) saturate(20%) hue-rotate(44deg) brightness(6%) contrast(90%);
+}
+.scroll-up #header .hire_btn{
+    color: white;
+    background: var(--color-blue);
+}
+.scroll-up ul li a{
+    color: #131313;
 }

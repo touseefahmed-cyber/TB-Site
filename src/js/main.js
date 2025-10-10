@@ -136,26 +136,26 @@ document.querySelectorAll('.odometer').forEach((odometerEl) => {
     createOdometer(odometerEl);
 });
 //header White
-(function () {
-    const header = document.getElementById('header');
-    if (!header) return;
-
-    function updateHeader() {
-        const hb = header.getBoundingClientRect();
-        // 1px below the header, centered horizontally
-        const x = Math.floor(window.innerWidth / 2);
-        const y = Math.min(window.innerHeight - 1, hb.bottom + 1);
-
-        const el = document.elementFromPoint(x, y);
-        const inContent = el && el.closest('.content'); // is the area under header inside .content?
-
-        header.classList.toggle('white-header', !!inContent);
-    }
-
-    window.addEventListener('scroll', updateHeader, { passive: true });
-    window.addEventListener('resize', updateHeader);
-    document.addEventListener('DOMContentLoaded', updateHeader);
-})();
+// (function () {
+//     const header = document.getElementById('header');
+//     if (!header) return;
+//
+//     function updateHeader() {
+//         const hb = header.getBoundingClientRect();
+//         // 1px below the header, centered horizontally
+//         const x = Math.floor(window.innerWidth / 2);
+//         const y = Math.min(window.innerHeight - 1, hb.bottom + 1);
+//
+//         const el = document.elementFromPoint(x, y);
+//         const inContent = el && el.closest('.content'); // is the area under header inside .content?
+//
+//         header.classList.toggle('white-header', !!inContent);
+//     }
+//
+//     window.addEventListener('scroll', updateHeader, { passive: true });
+//     window.addEventListener('resize', updateHeader);
+//     document.addEventListener('DOMContentLoaded', updateHeader);
+// })();
 
 
 //slider
@@ -280,3 +280,26 @@ sliders.forEach(slider => {
         });
     });
 });
+//Header
+let lastScrollTop = 0;
+const body = document.body;
+
+window.addEventListener("scroll", function () {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (scrollTop === 0) {
+        // When at the very top — remove both classes
+        body.classList.remove("scroll-up", "scroll-down");
+    } else if (scrollTop > lastScrollTop) {
+        // Scrolling down
+        body.classList.add("scroll-down");
+        body.classList.remove("scroll-up");
+    } else {
+        // Scrolling up
+        body.classList.add("scroll-up");
+        body.classList.remove("scroll-down");
+    }
+
+    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative scroll
+}, false);
+
