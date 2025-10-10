@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@tailwind components;
 @tailwind utilities;
+@tailwind components;
 *{
     box-sizing: border-box;
 }
@@ -83,6 +83,7 @@
     --color-light-white:#F5F5F5;
     --color-lime-green:#C3F55A;
 }
+
 @layer base {
     h1 { font-family: 'GilroyBold', sans-serif; @apply text-[clamp(33px,4vw,75px)] leading-[clamp(33px,5vw,75px)];}
     h2 {font-family: 'GilroyMedium', sans-serif; @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl;}
@@ -148,6 +149,11 @@
     .line-top {
         @apply absolute top-0 w-[80px] h-[5px] bg-[#C3F55A] opacity-0 rounded-[5px] rotate-90 3xl:right-[calc(1px+26.2%)] right-[calc(1px+25.2%)];
     }
+    .arrow-icon {@apply bottom-[30px] left-[30px] absolute;}
+    .faq-item.faq-active .arrow-icon{@apply right-[30px] left-auto;}
+    .faq-slider .swiper-slide {@apply 3xl:flex-[0_0_20%] 2xl:flex-[0_0_24%] lg:flex-[0_0_28%] md:flex-[0_0_40%] sm:flex-[0_0_50%] flex-[0_0_70%];}
+    .faq-slider .swiper-slide.faq-active {@apply lg:flex-[0_0_29%] md:flex-[0_0_45%] sm:flex-[0_0_55%] flex-[0_0_75%];}
+
     .mySwiper .swiper-wrapper .swiper-slide .curve-shape:after {
         content: "";
         box-shadow: 13px 21px 0px 13px #0F084B;
@@ -162,6 +168,22 @@
     .mySwiper .swiper-wrapper .swiper-slide:nth-child(even) .curve-shape:after {
         box-shadow: 13px 21px 0px 13px #4E63F6;
     }
+    .arrow_btn .swiper_btn {
+        @apply !w-[120px] md:!h-[60px] !h-[40px] rounded-[30px] transition-all duration-500 ease-in-out;
+    }
+    .arrow_btn .swiper_btn:hover + div,
+    .arrow_btn .swiper-button-prev:has(+ .swiper-button-next:hover) {
+        @apply md:!w-[60px] md:!h-[60px] !w-[40px] !h-[40px] rounded-full;
+    }
+    .arrow_btn .swiper_btn:hover{
+        @apply md:!w-[180px] !w-[140px];
+    }
+    .arrow_btn .swiper_btn:hover i{
+        font-size: 30px;
+    }
+}
+@layer utilities {
+
 }
 body{
     font-family: 'GilroyRegular';
@@ -209,18 +231,6 @@ body{
     opacity: 1;
 }
 
-/*.line-top {*/
-/*    position: absolute;*/
-/*    right: calc(1px + 26.2%);*/
-/*    top: 0;*/
-/*    width: 60px;*/
-/*    height: 6px;*/
-/*    background: #C3F55A;*/
-/*    opacity: 1;*/
-/*    border-radius: 5px;*/
-/*    transform: rotate(90deg);*/
-/*}*/
-
 /*Animation statics section*/
 /*Animation statics section*/
 /*white Header*/
@@ -250,51 +260,21 @@ body{
 html{
     scroll-behavior: smooth;
 }
+#cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none; /* so it won't block mouse events */
+}
 /*
 */
-.faq-item {
-    height: 600px;
-    background: #EDEDED;
-    border-radius: 40px;
-    color: var(--color-navy-blue);
-}
-.faq-question {
-    width: 100%;
-    background: none;
-    border: none;
-    outline: none;
-    text-align: left;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.faq-question .icon {
-    transition: transform 0.3s ease;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, padding 0.3s ease;
-    padding: 0 0;
-}
 .faq-item.faq-active{
     background: var(--color-main-blue);
 }
 .faq-item.faq-active .faq-question{
     color: #fff;
 }
-.arrow-icon {
-    bottom: 30px;
-    left: 30px;
-    position: absolute;
-}
-.faq-item.faq-active .arrow-icon{
-    left: auto;
-    right: 30px;
-}
+
 .big-arrow{
     display: none;
 }
@@ -304,20 +284,7 @@ html{
 .faq-item.faq-active .arrow-icon .big-arrow{
     display: block;
 }
-.faq-slider .swiper-slide {
-    flex: 0 0 20%; /* 25% width */
-}
 
-.faq-slider .swiper-slide.faq-active {
-    flex: 0 0 29%; /* First slide 40% */
-}
-
-#cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none; /* so it won't block mouse events */
-}
 .swiper-button-next, .swiper-button-prev {
     &.swiper-button-disabled {
         cursor: pointer;
@@ -325,24 +292,8 @@ html{
         pointer-events: all;
     }
 }
-.arrow_btn .swiper_btn {
-    width: 120px;
-    border-radius: 30px;
-    transition: all 0.5s
-    ease-in-out;
-    height: 60px;
-}
-.arrow_btn .swiper_btn:hover{
-    width: 180px;
-}
-.arrow_btn .swiper_btn:hover + div,.arrow_btn .swiper-button-prev:has(+ .swiper-button-next:hover){
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-}
-.arrow_btn .swiper_btn:hover i{
-    font-size: 30px;
-}
+
+/*Header*/
 #header{
     transition: all 0.3s ease-in-out;
 }
@@ -364,4 +315,10 @@ html{
 }
 .scroll-up ul li a{
     color: #131313;
+}
+.faq-question + div p{
+    opacity: 0;
+}
+.faq-active .faq-question + div p{
+opacity: 1;
 }
