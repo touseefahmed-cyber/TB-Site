@@ -10,7 +10,7 @@
 </head>
 <body class="overflow-x-hidden">
 <div id="cursor"></div>
-<header id="header" class=" 4xl:px-[80px] absolute px-[30px] z-30 py-[20px] w-full">
+<header id="header" class=" 4xl:px-[80px] absolute px-[30px] z-30 py-[20px] w-full ">
     <div class="flex justify-between items-center px-[20px]">
         <a href="#">
             <img src="src/images/logo.svg" alt="logo">
@@ -358,87 +358,88 @@
         </div>
     </div>
 </div>
-<div class="mx-[30px] content ">
-    <div class="pt-[195px]">
-        <div class="text-center  pb-[310px] pt-[195px] panel h-[100dvh] ">
+<div class="md:mx-[30px] mx-0 content ">
+    <div class="pt-[clamp(80px,10vw,195px)]">
+        <div class="text-center panel h-[100dvh] 3xl:pb-[310px] pb-[250px] pt-[195px] ">
             <div class="relative inline-block">
-                <div class="rounded-tl-[70px] rounded-tr-[70px] rounded-bl-[70px] inline-block py-[55px] px-[40px] bg-lime-green text-dark-gray font-GilorySemiBold text-[45px] leading-[45px] text-left absolute top-[-50px] left-[-396px]">Includes <br> Facilities & Assets</div>
-                <div class="text-white font-GilorySemiBold text-[45px] leading-[45px] bg-main-blue rounded-tl-[70px] rounded-tr-[70px] rounded-br-[70px] inline-block p-[45px] absolute top-[-142px] right-[-220px]">40 hours <br> Free trial</div>
-                <h2 class="font-GilorySemiBold text-[150px] leading-[150px] mb-[60px] text-navy-blue">Services <br /> we provide</h2>
-                <div class="text-white font-GilorySemiBold text-[45px] leading-[45px] bg-navy-blue rounded-bl-[70px] rounded-tr-[70px] rounded-br-[70px] inline-block py-[45px] px-[60px] absolute bottom-[-175px] left-1/2 -translate-x-1/2 transform">IT & HR <br> Management</div>
+                <div class="3xl:rounded-tl-[70px] rounded-tl-[30px] 3xl:rounded-tr-[70px] rounded-tr-[30px] 3xl:rounded-bl-[70px] rounded-bl-[30px] sm:inline-block 3xl:py-[55px] md:py-[40px] py-[30px] 3xl:px-[40px] px-[30px] bg-lime-green text-dark-gray font-GilorySemiBold text-[clamp(24px,2vw,45px)] leading-[clamp(24px,2vw,45px)] text-left absolute lg:top-[-50px] top-[-140px] 4xl:left-[-396px] lg:left-[-240px] left-[-150px]  hidden">Includes <br> Facilities & Assets</div>
+                <div class="text-white font-GilorySemiBold text-[clamp(24px,2vw,45px)] leading-[clamp(24px,2vw,45px)] bg-main-blue 3xl:rounded-tl-[70px] rounded-tl-[30px] 3xl:rounded-tr-[70px] rounded-tr-[30px] 3xl:rounded-br-[70px] rounded-br-[30px] inline-block 3xl:p-[45px] md:p-[35px] p-[25px] absolute top-[-142px] 2xl:right-[-220px] sm:right-[-150px] right-[-60px]">40 hours <br> Free trial</div>
+                <h2 class="font-GilorySemiBold text-[clamp(46px,10vw,150px)] leading-[clamp(46px,10vw,150px)] 4xl:mb-[60px] mb-[20px] text-navy-blue">Services <br /> we provide</h2>
+                <div class="text-white font-GilorySemiBold text-[clamp(24px,2vw,45px)] leading-[clamp(24px,2vw,45px)] bg-navy-blue 3xl:rounded-bl-[70px] rounded-bl-[30px] 3xl:rounded-tr-[70px] rounded-tr-[30px] 3xl:rounded-br-[70px] rounded-br-[30px] inline-block lg:py-[45px] md:py-[35px] py-[25px] md:px-[60px] px-[40px] absolute lg:bottom-[-175px] md:bottom-[-150px] sm:bottom-[-120px] bottom-[-98px] left-1/2 -translate-x-1/2 transform">IT & HR <br> Management</div>
             </div>
         </div>
-        <div class="bg-main-blue text-white rounded-tl-[50px] panel relative z-10 rounded-tr-[50px] p-[76px_80px_134px] flex justify-between items-center ">
+        <div class="panel bg-main-blue text-white md:rounded-tl-[50px] rounded-tl-[30px]  relative z-10 md:rounded-tr-[50px] rounded-tr-[30px] 4xl:p-[76px_80px_134px] md:p-[56px_50px_134px] p-[36px_30px_84px] flex justify-between lg:items-center md:gap-[50px] gap-[20px] lg:flex-row flex-col">
             <div>
                 <figure class="mb-[30px]">
-                    <img src="src/images/staff_icon.svg" alt="staff_icon.">
+                    <img src="src/images/staff_icon.svg" alt="staff_icon" class="sm:w-auto w-[100px]">
                 </figure>
-                <h3 class="text-[62px] leading-[75px] font-GiloryMedium ">All Staff <br> Outsourcing</h3>
+                <h3 class="4xl:text-[62px] 3xl:text-[54px] lg:text-[50px] sm:text-[42px] text-[36px] leading-[42px] sm:leading-[48px] 4xl:leading-[75px] lg:leading-[60px] font-GiloryMedium ">All Staff <br> Outsourcing</h3>
             </div>
-            <div class="flex justify-between ">
-                <div class="w-[41%]">
-                    <ul class="flex flex-col space-y-[44px] ">
+            <div class="flex justify-between sm:flex-row flex-col gap-y-[30px]">
+                <div class="sm:w-[41%] w-full ">
+                    <ul class="flex flex-col md:space-y-[44px] space-y-[34px] ">
                         <li>
-                            <h6 class="text-[36px] leading-[36px] font-GiloryMedium mb-[9px]">Free Trial</h6>
-                            <span class="text-[24px] leading-[24px]">40-hour risk-free trial before hiring</span>
+                            <h6 class="4xl:text-[36px] lg:text-[30px] text-[26px] 4xl:leading-[36px] lg:leading-[30px] leading-[26px] font-GiloryMedium mb-[9px]">Free Trial</h6>
+                            <span class="4xl:text-[24px] text-[20px] 4xl:leading-[24px] leading-[20px]">40-hour risk-free trial before hiring</span>
                         </li>
                         <li>
-                            <h6 class="text-[36px] leading-[36px] font-GiloryMedium mb-[9px]">Fully Managed</h6>
-                            <span class="text-[24px] leading-[24px]">PAYE, NI, holidays, training, equipment covered</span>
+                            <h6 class="4xl:text-[36px] lg:text-[30px] text-[26px] 4xl:leading-[36px] lg:leading-[30px] leading-[26px] font-GiloryMedium mb-[9px]">Fully Managed</h6>
+                            <span class="4xl:text-[24px] text-[20px] 4xl:leading-[24px] leading-[20px]">PAYE, NI, holidays, training, equipment covered</span>
                         </li>
                     </ul>
                 </div>
-                <div class="w-[41%]">
-                    <ul class="flex flex-col space-y-[44px]">
+                <div class="sm:w-[41%] w-full">
+                    <ul class="flex flex-col md:space-y-[44px] space-y-[34px]">
                         <li>
-                            <h6 class="text-[36px] leading-[36px] font-GiloryMedium mb-[9px]">Tailored CVs</h6>
-                            <span class="text-[24px] leading-[24px]">Up to 5 profiles matched to your role</span>
+                            <h6 class="4xl:text-[36px] lg:text-[30px] text-[26px] 4xl:leading-[36px] lg:leading-[30px] leading-[26px] font-GiloryMedium mb-[9px]">Tailored CVs</h6>
+                            <span class="4xl:text-[24px] text-[20px] 4xl:leading-[24px] leading-[20px]">Up to 5 profiles matched to your role</span>
                         </li>
                         <li>
-                            <h6 class="text-[36px] leading-[36px] font-GiloryMedium mb-[9px]">Cost-Saving</h6>
-                            <span class="text-[24px] leading-[24px]">A flexible recruitment solution built for SMEs</span>
+                            <h6 class="4xl:text-[36px] lg:text-[30px] text-[26px] 4xl:leading-[36px] lg:leading-[30px] leading-[26px] font-GiloryMedium mb-[9px]">Cost-Saving</h6>
+                            <span class="4xl:text-[24px] text-[20px] 4xl:leading-[24px] leading-[20px]">A flexible recruitment solution built for SMEs</span>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="bg-lime-green relative z-10 text-navy-blue rounded-tl-[50px] rounded-tr-[50px] p-[76px_80px_206px] flex justify-between items-center mt-[-72px] ">
+        <div class="bg-lime-green relative z-10 text-navy-blue md:rounded-tl-[50px] rounded-tl-[30px] md:rounded-tr-[50px] rounded-tr-[30px] 4xl:p-[76px_80px_206px]
+         3xl:p-[66px_50px_196px] lg:p-[66px_50px_145px] md:p-[66px_50px_45px] p-[36px_30px_84px] flex justify-between  mt-[-72px] lg:items-center md:gap-[50px] gap-[30px] lg:flex-row flex-col ">
             <div>
                 <figure class="mb-[30px]">
-                    <img src="src/images/dedicated_icon.svg" alt="dedicated_icon">
+                    <img src="src/images/dedicated_icon.svg" alt="dedicated_icon" class="sm:w-auto w-[100px]">
                 </figure>
-                <h3 class="text-[62px] leading-[75px] font-GiloryMedium ">Dedicated<br> BD Teams</h3>
+                <h3 class="4xl:text-[62px] 3xl:text-[54px] lg:text-[50px] sm:text-[42px] text-[36px] leading-[42px] sm:leading-[48px] 4xl:leading-[75px] lg:leading-[60px] ">Dedicated<br> BD Teams</h3>
             </div>
-            <div class="flex gap-[100px]">
+            <div class="flex sm:gap-x-[100px]  gap-y-[30px] sm:flex-row flex-col">
                 <div >
-                    <ul class="flex flex-col space-y-[44px] ">
+                    <ul class="flex flex-col md:space-y-[44px] space-y-[34px] ">
                         <li>
-                            <h6 class="text-[36px] leading-[36px] font-GiloryMedium mb-[9px]">Free Trial</h6>
-                            <span class="text-[24px] leading-[24px]">40-hour risk-free trial before hiring</span>
+                            <h6 class="4xl:text-[36px] lg:text-[30px] text-[26px] 4xl:leading-[36px] lg:leading-[30px] leading-[26px] font-GiloryMedium mb-[9px]">Free Trial</h6>
+                            <span class="4xl:text-[24px] text-[20px] 4xl:leading-[24px] leading-[20px]">40-hour risk-free trial before hiring</span>
                         </li>
                         <li>
-                            <h6 class="text-[36px] leading-[36px] font-GiloryMedium mb-[9px]">Smarter Than Outsourcing</h6>
-                            <span class="text-[24px] leading-[24px]">Dedicated team, cost-effective</span>
+                            <h6 class="4xl:text-[36px] lg:text-[30px] text-[26px] 4xl:leading-[36px] lg:leading-[30px] leading-[26px] font-GiloryMedium mb-[9px]">Smarter Than Outsourcing</h6>
+                            <span class="4xl:text-[24px] text-[20px] 4xl:leading-[24px] leading-[20px]">Dedicated team, cost-effective</span>
                         </li>
                         <li>
-                            <h6 class="text-[36px] leading-[36px] font-GiloryMedium mb-[9px]">Pipeline Growth</h6>
-                            <span class="text-[24px] leading-[24px]">Consistent, qualified opportunities delivered</span>
+                            <h6 class="4xl:text-[36px] lg:text-[30px] text-[26px] 4xl:leading-[36px] lg:leading-[30px] leading-[26px] font-GiloryMedium mb-[9px]">Pipeline Growth</h6>
+                            <span class="4xl:text-[24px] text-[20px] 4xl:leading-[24px] leading-[20px]">Consistent, qualified opportunities delivered</span>
                         </li>
                     </ul>
                 </div>
                 <div >
-                    <ul class="flex flex-col space-y-[44px]">
+                    <ul class="flex flex-col md:space-y-[44px] space-y-[34px] ">
                         <li>
-                            <h6 class="text-[36px] leading-[36px] font-GiloryMedium mb-[9px]">Outbound Sales Engine</h6>
-                            <span class="text-[24px] leading-[24px]">Calls, emails and lead generation fully managed</span>
+                            <h6 class="4xl:text-[36px] lg:text-[30px] text-[26px] 4xl:leading-[36px] lg:leading-[30px] leading-[26px] font-GiloryMedium mb-[9px]">Outbound Sales Engine</h6>
+                            <span class="4xl:text-[24px] text-[20px] 4xl:leading-[24px] leading-[20px]">Calls, emails and lead generation fully managed</span>
                         </li>
                         <li>
-                            <h6 class="text-[36px] leading-[36px] font-GiloryMedium mb-[9px]">Strategy Week</h6>
-                            <span class="text-[24px] leading-[24px]">Prove value before you commit</span>
+                            <h6 class="4xl:text-[36px] lg:text-[30px] text-[26px] 4xl:leading-[36px] lg:leading-[30px] leading-[26px] font-GiloryMedium mb-[9px]">Strategy Week</h6>
+                            <span class="4xl:text-[24px] text-[20px] 4xl:leading-[24px] leading-[20px]">Prove value before you commit</span>
                         </li>
                         <li>
-                            <h6 class="text-[36px] leading-[36px] font-GiloryMedium mb-[9px]">Dedicated & Scalable</h6>
-                            <span class="text-[24px] leading-[24px]">Your own cost-effective team focused on results</span>
+                            <h6 class="4xl:text-[36px] lg:text-[30px] text-[26px] 4xl:leading-[36px] lg:leading-[30px] leading-[26px] font-GiloryMedium mb-[9px]">Dedicated & Scalable</h6>
+                            <span class="4xl:text-[24px] text-[20px] 4xl:leading-[24px] leading-[20px]">Your own cost-effective team focused on results</span>
                         </li>
                     </ul>
                 </div>
