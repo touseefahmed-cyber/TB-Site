@@ -169,7 +169,7 @@
         box-shadow: 13px 21px 0px 13px #4E63F6;
     }
     .arrow_btn .swiper_btn {
-        @apply !w-[120px] md:!h-[60px] !h-[40px] rounded-[30px] transition-all duration-500 ease-in-out;
+        @apply xl:!w-[120px] !w-[100px] md:!h-[60px] !h-[40px] rounded-[30px] transition-all duration-500 ease-in-out;
     }
     .arrow_btn .swiper_btn:hover + div,
     .arrow_btn .swiper-button-prev:has(+ .swiper-button-next:hover) {

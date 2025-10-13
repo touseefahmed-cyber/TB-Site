@@ -166,7 +166,29 @@ var swiper = new Swiper(".mySwiper", {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        // when window width is >= 640px
+        640: {
+            slidesPerView: 1.2,
+            spaceBetween: 15,
+        },
+        // when window width is >= 1024px
+        1024: {
+            slidesPerView: 2.1,
+            spaceBetween: 20,
+        },
+        1440: {
+            slidesPerView: 3.1,
+            spaceBetween: 20,
+        },
+    },
 });
+
 const backToTopButton = document.getElementById("backToTop");
 
 window.onscroll = function() {

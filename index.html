@@ -10,7 +10,7 @@
 </head>
 <body class="overflow-x-hidden">
 <div id="cursor"></div>
-<header id="header" class=" 4xl:px-[80px] absolute px-[30px] z-30 py-[20px] w-full ">
+<header id="header" class=" 4xl:px-[80px] absolute px-[30px] z-30 py-[20px] w-full">
     <div class="flex justify-between items-center px-[20px]">
         <a href="#">
             <img src="src/images/logo.svg" alt="logo">
@@ -87,10 +87,10 @@
         <a href="#" class="inline-block font-GilorySemiBold bg-blue text-[16px] leading-normal text-white rounded-[30px] p-[6px_64px_6px_65px] ">Let’s Talk</a>
     </div>
 </div>
-<div class="pt-[210px] content " >
-    <div class="mb-[22px] 4xl:mx-[80px] lg:mx-[24px] mx-[24px] flex justify-between">
+<div class="pt-[clamp(50px,10vw,210px)] content " >
+    <div class="mb-[22px] 4xl:mx-[80px] lg:mx-[24px] mx-[24px] flex justify-between md:flex-row flex-col">
         <div>
-            <h2 class="font-GilorySemiBold text-[150px] leading-[150px]">Success Stories</h2>
+            <h2 class="font-GilorySemiBold text-[clamp(46px,10vw,150px)] leading-[clamp(46px,10vw,150px)]">Success Stories</h2>
         </div>
         <div class="relative flex items-center gap-[24px] arrow_btn">
             <div class="swiper-button-prev swiper_btn !relative inset-0 !top-0 border-[#BCBCBC] border   !mt-0 hover:bg-lime-green hover:border-lime-green group"><i class="fas fa-arrow-left text-[#BCBCBC] text-[24px] group-hover:text-navy-blue"></i></div>
@@ -98,7 +98,7 @@
         </div>
     </div>
     <!-- Swiper -->
-   <div class="4xl:ml-[80px] lg:ml-[24px] ml-[24px] slider" >
+   <div class="4xl:ml-[80px] lg:ml-[24px] ml-[24px] sm:mr-0 mr-[24px] slider" >
        <div class="swiper mySwiper">
            <div class="swiper-wrapper">
                <div class="swiper-slide">
@@ -106,13 +106,13 @@
                        <figure class="mb-0 h-[666px]">
                            <img src="src/images/team_img1.png" alt="team_img" class="rounded-tl-[30px] rounded-tr-[30px] w-full">
                        </figure>
-                       <div class="absolute bottom-0 pl-[40px] pr-[30px] py-[28px] bg-navy-blue w-full rounded-tr-[30px] flex items-center justify-between curve-shape">
+                       <div class="absolute bottom-0 sm:pl-[40px] sm:pr-[30px] px-[20px] py-[28px] bg-navy-blue w-full rounded-tr-[30px] flex items-center justify-between curve-shape">
                            <div class="text-white w-[74%]">
                                <span class="block text-[18px] leading-[18px] mb-[10px]">Matthew Cooper, Co-Founder, Home Selling Expert</span>
-                               <h5 class="font-GilorySemiBold text-[24px] leading-[24px]">We've made about 15 to 20 times return on our investment already..</h5>
+                               <h5 class="font-GilorySemiBold sm:text-[24px] text-[20px] leading-[24px]">We've made about 15 to 20 times return on our investment already..</h5>
                            </div>
                            <div class="model-box">
-                               <button command="show-modal" commandfor="dialog" class="cursor-pointer rounded-full text-white border border-white w-[70px] h-[70px] flex items-center justify-center"><i class="fas fa-play text-[24px]"></i></button>
+                               <button command="show-modal" commandfor="dialog" class="cursor-pointer rounded-full text-white border border-white sm:w-[70px] sm:h-[70px] w-[40px] h-[40px] flex items-center justify-center"><i class="fas fa-play sm:text-[24px] text-[18px]"></i></button>
                                <el-dialog>
                                    <dialog id="dialog" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
                                        <el-dialog-backdrop class="fixed inset-0 bg-[rgb(0_0_0_/_90%)] transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
@@ -139,13 +139,13 @@
                        <figure class="mb-0 h-[666px]">
                            <img src="src/images/team_img2.png" alt="team_img" class="rounded-tl-[30px] rounded-tr-[30px] w-full h-full object-cover">
                        </figure>
-                       <div class="absolute bottom-0 pl-[40px] pr-[30px] py-[28px] even:bg-main-blue w-full rounded-tr-[30px] flex items-center justify-between curve-shape">
+                       <div class="absolute bottom-0 sm:pl-[40px] sm:pr-[30px] px-[20px] py-[28px] even:bg-main-blue w-full rounded-tr-[30px] flex items-center justify-between curve-shape">
                            <div class="text-white w-[74%]">
                                <span class="block text-[18px] leading-[18px] mb-[10px]">Sarah Liu, Head of Operations, toplcup </span>
-                               <h5 class="font-GilorySemiBold text-[24px] leading-[24px]">We were fortunate enough to be introduced to TopBoffin a year and a half ago and we never looked back.</h5>
+                               <h5 class="font-GilorySemiBold sm:text-[24px] text-[20px] leading-[24px]">We were fortunate enough to be introduced to TopBoffin a year and a half ago and we never looked back.</h5>
                            </div>
                            <div class="model-box">
-                               <button command="show-modal" commandfor="dialog2" class="cursor-pointer rounded-full text-white border border-white w-[70px] h-[70px] flex items-center justify-center"><i class="fas fa-play text-[24px]"></i></button>
+                               <button command="show-modal" commandfor="dialog2" class="cursor-pointer rounded-full text-white border border-white sm:w-[70px] sm:h-[70px] w-[40px] h-[40px] flex items-center justify-center"><i class="fas fa-play sm:text-[24px] text-[18px]"></i></button>
                                <el-dialog>
                                    <dialog id="dialog2" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
                                        <el-dialog-backdrop class="fixed inset-0 bg-[rgb(0_0_0_/_90%)] transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
@@ -172,13 +172,14 @@
                        <figure class="mb-0 h-[666px]">
                            <img src="src/images/team_img3.png" alt="team_img" class="rounded-tl-[30px] rounded-tr-[30px] w-full h-full object-cover">
                        </figure>
-                       <div class="absolute bottom-0 pl-[40px] pr-[30px] py-[28px] bg-navy-blue w-full rounded-tr-[30px] flex items-center justify-between curve-shape">
+                       <div class="absolute bottom-0 sm:pl-[40px] sm:pr-[30px] px-[20px] py-[28px] bg-navy-blue w-full rounded-tr-[30px] flex items-center justify-between curve-shape">
                            <div class="text-white w-[74%]">
                                <span class="block text-[18px] leading-[18px] mb-[10px]">Toby Radcliffe, Founder, ZeroBees</span>
-                               <h5 class="font-GilorySemiBold text-[24px] leading-[24px]">The outreach is really in keeping with what we want to achieve... which is personalized, tailored.</h5>
+                               <h5 class="font-GilorySemiBold sm:text-[24px] text-[20px] leading-[24px]">The outreach is really in keeping with what we want to achieve... which is personalized, tailored.</h5>
                            </div>
                            <div class="model-box">
-                               <button command="show-modal" commandfor="dialog3" class="cursor-pointer rounded-full text-white border border-white w-[70px] h-[70px] flex items-center justify-center"><i class="fas fa-play text-[24px]"></i></button>
+                               <button command="show-modal" commandfor="dialog3" class="cursor-pointer rounded-full text-white border border-white sm:w-[70px] sm:h-[70px] w-[40px] h-[40px]
+                               flex items-center justify-center"><i class="fas fa-play sm:text-[24px] text-[18px]"></i></button>
                                <el-dialog>
                                    <dialog id="dialog3" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
                                        <el-dialog-backdrop class="fixed inset-0 bg-[rgb(0_0_0_/_90%)] transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
@@ -205,13 +206,14 @@
                        <figure class="mb-0 h-[666px]">
                            <img src="src/images/team_img4.png" alt="team_img" class="rounded-tl-[30px] rounded-tr-[30px] w-full h-full object-cover">
                        </figure>
-                       <div class="absolute bottom-0 pl-[40px] pr-[30px] py-[28px] even:bg-main-blue w-full rounded-tr-[30px] flex items-center justify-between curve-shape">
+                       <div class="absolute bottom-0 sm:pl-[40px] sm:pr-[30px] px-[20px] py-[28px] even:bg-main-blue w-full rounded-tr-[30px] flex items-center justify-between curve-shape">
                            <div class="text-white w-[74%]">
                                <span class="block text-[18px] leading-[18px] mb-[10px]">Jacqui Macdonald, Managing Director, A Thousand Monkeys</span>
-                               <h5 class="font-GilorySemiBold text-[24px] leading-[24px]">It's fantastic that a small business like ours is able to get access to this type of resource.</h5>
+                               <h5 class="font-GilorySemiBold sm:text-[24px] text-[20px] leading-[24px]">It's fantastic that a small business like ours is able to get access to this type of resource.</h5>
                            </div>
                            <div class="model-box">
-                               <button command="show-modal" commandfor="dialog4" class="cursor-pointer rounded-full text-white border border-white w-[70px] h-[70px] flex items-center justify-center"><i class="fas fa-play text-[24px]"></i></button>
+                               <button command="show-modal" commandfor="dialog4" class="cursor-pointer rounded-full text-white border border-white sm:w-[70px] sm:h-[70px]
+                                w-[40px] h-[40px] flex items-center justify-center"><i class="fas fa-play sm:text-[24px] text-[18px]"></i></button>
                                <el-dialog>
                                    <dialog id="dialog4" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
                                        <el-dialog-backdrop class="fixed inset-0 bg-[rgb(0_0_0_/_90%)] transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
@@ -238,13 +240,14 @@
                        <figure class="mb-0 h-[666px]">
                            <img src="src/images/team_img1.png" alt="team_img" class="rounded-tl-[30px] rounded-tr-[30px] w-full h-full object-cover">
                        </figure>
-                       <div class="absolute bottom-0 pl-[40px] pr-[30px] py-[28px] bg-navy-blue w-full rounded-tr-[30px] flex items-center justify-between curve-shape">
+                       <div class="absolute bottom-0 sm:pl-[40px] sm:pr-[30px] px-[20px] py-[28px] bg-navy-blue w-full rounded-tr-[30px] flex items-center justify-between curve-shape">
                            <div class="text-white w-[74%]">
                                <span class="block text-[18px] leading-[18px] mb-[10px]">Ben Hobbs, Managing Director, Bluebell IT Solutions</span>
-                               <h5 class="font-GilorySemiBold text-[24px] leading-[24px]">Our experience with TopBoffin's been really great... long may that continue.</h5>
+                               <h5 class="font-GilorySemiBold sm:text-[24px] text-[20px] leading-[24px]">Our experience with TopBoffin's been really great... long may that continue.</h5>
                            </div>
                            <div class="model-box">
-                               <button command="show-modal" commandfor="dialog5" class="cursor-pointer rounded-full text-white border border-white w-[70px] h-[70px] flex items-center justify-center"><i class="fas fa-play text-[24px]"></i></button>
+                               <button command="show-modal" commandfor="dialog5" class="cursor-pointer rounded-full text-white border border-white sm:w-[70px] sm:h-[70px]
+                                w-[40px] h-[40px] flex items-center justify-center"><i class="fas fa-play sm:text-[24px] text-[18px]"></i></button>
                                <el-dialog>
                                    <dialog id="dialog5" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
                                        <el-dialog-backdrop class="fixed inset-0 bg-[rgb(0_0_0_/_90%)] transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
@@ -271,13 +274,15 @@
                        <figure class="mb-0 h-[666px]">
                            <img src="src/images/team_img2.png" alt="team_img" class="rounded-tl-[30px] rounded-tr-[30px] w-full h-full object-cover">
                        </figure>
-                       <div class="absolute bottom-0 pl-[40px] pr-[30px] py-[28px] even:bg-main-blue w-full rounded-tr-[30px] flex items-center justify-between curve-shape">
+                       <div class="absolute bottom-0 sm:pl-[40px] sm:pr-[30px] px-[20px] py-[28px] even:bg-main-blue w-full rounded-tr-[30px] flex items-center justify-between curve-shape">
                            <div class="text-white w-[74%]">
                                <span class="block text-[18px] leading-[18px] mb-[10px]">Nina Cullen, Director, Bluebell Cloud Solutions</span>
-                               <h5 class="font-GilorySemiBold text-[24px] leading-[24px]">I would definitely recommend TopBoffin to other SMEs..</h5>
+                               <h5 class="font-GilorySemiBold sm:text-[24px] text-[20px] leading-[24px]">I would definitely recommend TopBoffin to other SMEs..</h5>
                            </div>
                            <div class="model-box">
-                               <button command="show-modal" commandfor="dialog6" class="cursor-pointer rounded-full text-white border border-white w-[70px] h-[70px] flex items-center justify-center"><i class="fas fa-play text-[24px]"></i></button>
+                               <button command="show-modal" commandfor="dialog6" class="cursor-pointer rounded-full text-white border
+                               border-white sm:w-[70px] sm:h-[70px]
+                                w-[40px] h-[40px] flex items-center justify-center"><i class="fas fa-play sm:text-[24px] text-[18px]"></i></button>
                                <el-dialog>
                                    <dialog id="dialog6" aria-labelledby="dialog-title" class="fixed inset-0 size-auto max-h-none max-w-none overflow-y-auto bg-transparent backdrop:bg-transparent">
                                        <el-dialog-backdrop class="fixed inset-0 bg-[rgb(0_0_0_/_90%)] transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></el-dialog-backdrop>
@@ -353,7 +358,7 @@
         </div>
     </div>
 </div>
-<div class="mx-[30px] content">
+<div class="mx-[30px] content ">
     <div class="pt-[195px]">
         <div class="text-center  pb-[310px] pt-[195px] panel h-[100dvh] ">
             <div class="relative inline-block">
