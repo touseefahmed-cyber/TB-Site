@@ -405,9 +405,6 @@
   .h-\[666px\] {
     height: 666px;
   }
-  .h-\[calc\(100dvh\+72px\)\] {
-    height: calc(100dvh + 72px);
-  }
   .h-full {
     height: 100%;
   }
@@ -760,11 +757,11 @@
   .pt-\[40px\] {
     padding-top: 40px;
   }
+  .pt-\[195px\] {
+    padding-top: 195px;
+  }
   .pt-\[210px\] {
     padding-top: 210px;
-  }
-  .pt-\[390px\] {
-    padding-top: 390px;
   }
   .pt-\[clamp\(50px\,10vw\,145px\)\] {
     padding-top: clamp(50px, 10vw, 145px);
