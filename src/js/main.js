@@ -325,3 +325,64 @@ window.addEventListener("scroll", function () {
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative scroll
 }, false);
 
+//TEATM SLIDER
+var impactSlider = new Swiper(".impactSlider", {
+    slidesPerView: 3.1,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        // when window width is >= 640px
+        640: {
+            slidesPerView: 1.2,
+            spaceBetween: 15,
+        },
+        // when window width is >= 1024px
+        1024: {
+            slidesPerView: 2.1,
+            spaceBetween: 20,
+        },
+        1440: {
+            slidesPerView: 3.4,
+            spaceBetween: 20,
+        },
+    },
+});
+//TEAM Slider
+
+var impactSlider = new Swiper("#team_slider", {
+    slidesPerView: 3.1,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        // when window width is >= 320px
+        320: {
+            slidesPerView: 1,
+            spaceBetween: 10,
+        },
+        // when window width is >= 640px
+        640: {
+            slidesPerView: 1.2,
+            spaceBetween: 15,
+        },
+        // when window width is >= 1024px
+        1024: {
+            slidesPerView: 2.1,
+            spaceBetween: 20,
+        },
+        1440: {
+            slidesPerView: 7.4,
+            spaceBetween: 20,
+        },
+    },
+});

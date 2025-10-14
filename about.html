@@ -1,0 +1,381 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/themes/odometer-theme-default.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link href="src/output.css" rel="stylesheet">
+</head>
+<body class="overflow-x-hidden">
+<div id="cursor"></div>
+<header id="header" class="black-header absolute top-0  4xl:px-[80px]  px-[30px] z-30 py-[20px] w-full ">
+    <div class="flex justify-between items-center px-[20px]">
+        <a href="#">
+            <img src="src/images/logo.svg" alt="logo">
+        </a>
+        <div class="flex gap-4 items-center">
+            <div class="glass-container py-[16px] px-[32px] rounded-[100px]">
+                <div class="glass-filter"></div>
+                <div class="glass-overlay"></div>
+                <div class="glass-specular"></div>
+                <ul class="flex gap-[36px] relative z-10">
+                    <li><a href="#" class="text-white font-GilorySemiBold text-[24px] leading-[24px]">Services</a> </li>
+                    <li><a href="#" class="text-white font-GilorySemiBold text-[24px] leading-[24px]">Portfolio</a> </li>
+                    <li><a href="#" class="text-white font-GilorySemiBold text-[24px] leading-[24px]">People</a> </li>
+                    <li><a href="#" class="text-white font-GilorySemiBold text-[24px] leading-[24px]">About</a> </li>
+                </ul>
+            </div>
+            <div>
+                <a href="#" class="inline-block font-GilorySemiBold text-blue text-[24px] leading-normal bg-white rounded-[30px] p-[12px_33px_13px_32px] hire_btn">Hire Now</a>
+            </div>
+        </div>
+    </div>
+</header>
+<section class="bg-[url(/src/images/about_banner.png)] h-[990px] mx-[80px] mt-[226px] bg-cover bg-no-repeat !rounded-tl-none rounded-[50px] relative">
+    <div class="bg-white w-[50%]  top-[-41px] rounded-br-[50px] relative after:absolute after:top-[41px] after:right-[-49px] after:h-[50px] after:w-[50px] after:rotate-180 after:rounded-br-[50px]
+     after:bg-transparent after:shadow-[13px_21px_0px_13px_#fff] after:content-[''] before:absolute before:bottom-[-49px] before:left-[-1px] before:h-[50px] before:w-[50px] before:rotate-180 before:rounded-br-[50px] before:bg-transparent before:shadow-[13px_21px_0px_13px_#fff] before:content-['']">
+        <h1 class="font-GilorySemiBold text-[92px] leading-[95px] text-navy-blue pb-[29px]">The journey that <br> shaped our success</h1>
+    </div>
+    <div class="bg-[linear-gradient(90.86deg,rgba(20,20,20,0.5)_0.07%,rgba(15,8,75,0.5)_51.78%,rgba(20,20,20,0.5)_98.73%)] backdrop-blur-[30px] absolute bottom-0 w-full rounded-bl-[50px] py-[34px] rounded-br-[50px]">
+        <p class="text-[32px] leading-[32px] text-white text-center">As a UK-based outsourcing services partner, <strong>We help SMEs</strong> build dependable teams <br> <strong>without the cost</strong> and complexity of a traditional recruitment agency.</p>
+    </div>
+</section>
+<section class="pt-[195px] pb-[212px]">
+    <div class="mb-[58px] 4xl:mx-[80px] lg:mx-[24px] mx-[24px] flex justify-between md:flex-row flex-col">
+        <div>
+            <h2 class="font-GilorySemiBold text-[clamp(46px,10vw,92px)] leading-[clamp(46px,10vw,92px)] text-navy-blue">Our Team’s <br>  Impact</h2>
+        </div>
+        <div class="relative flex items-center gap-[24px] arrow_btn">
+            <div class="swiper-button-prev swiper_btn !relative inset-0 !top-0 border-[#BCBCBC] border   !mt-0 hover:bg-lime-green hover:border-lime-green group"><i class="fas fa-arrow-left text-[#BCBCBC] text-[24px] group-hover:text-navy-blue"></i></div>
+            <div class="swiper-button-next swiper_btn !relative inset-0 !top-0 border-[#BCBCBC] border  !mt-0 hover:bg-lime-green hover:border-lime-green group"><i class="fas fa-arrow-right text-[#BCBCBC] text-[24px] group-hover:text-navy-blue"></i></div>
+        </div>
+    </div>
+    <!-- Swiper -->
+    <div class="4xl:ml-[80px] lg:ml-[24px] ml-[24px] sm:mr-0 mr-[24px] slider" >
+        <div class="swiper impactSlider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide !h-auto">
+                    <div class="bg-blue p-[50px] rounded-[40px] text-white h-full flex flex-col">
+                        <h4 class="text-[42px] leading-[52px] mb-[11px] font-GilorySemiBold">Accelerating <br> Sales & Growth</h4>
+                        <span class="text-lime-green text-[24px] leading-[24px] mb-[44px] block">Business Development Manager</span>
+                        <ul class="flex flex-col gap-y-[30px] mt-auto">
+                            <li>
+                                <div class="font-GilorySemiBold text-[92px] leading-[92px] mb-[12px]">£134K+</div>
+                                <span class="text-[24px] leading-[24px] block">In B2B retail sales.</span>
+                            </li>
+                            <li>
+                                <div class="font-GilorySemiBold text-[92px] leading-[92px] mb-[12px]">65%</div>
+                                <span class="text-[24px] leading-[24px] block">Annual B2B revenue targets secured.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper-slide !h-auto">
+                    <div class="bg-blue p-[50px] rounded-[40px] text-white h-full flex flex-col">
+                        <h4 class="text-[42px] leading-[52px] mb-[11px] font-GilorySemiBold">Crafted High <br> Performance <br> Websites</h4>
+                        <span class="text-lime-green text-[24px] leading-[24px] mb-[44px] block">Web Developer</span>
+                        <ul class="flex flex-col gap-y-[30px] mt-auto">
+                            <li>
+                                <div class="font-GilorySemiBold text-[92px] leading-[92px] mb-[12px]">25+</div>
+                                <span class="text-[24px] leading-[24px] block">Websites Delivered</span>
+                            </li>
+                            <li>
+                                <div class="font-GilorySemiBold text-[92px] leading-[92px] mb-[12px]">99.99%</div>
+                                <span class="text-[24px] leading-[24px] block">Uptime & Security</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper-slide !h-auto">
+                    <div class="bg-blue p-[50px] rounded-[40px] text-white h-full flex flex-col">
+                        <h4 class="text-[42px] leading-[52px] mb-[11px] font-GilorySemiBold">Promoting <br> Partnership & <br> Success</h4>
+                        <span class="text-lime-green text-[24px] leading-[24px] mb-[44px] block">Brand Marketing Specialists</span>
+                        <ul class="flex flex-col gap-y-[30px] mt-auto">
+                            <li>
+                                <div class="font-GilorySemiBold text-[92px] leading-[92px] mb-[12px]">32</div>
+                                <span class="text-[24px] leading-[24px] block">Meetings Booked.</span>
+                            </li>
+                            <li>
+                                <div class="font-GilorySemiBold text-[92px] leading-[92px] mb-[12px]">£9K+</div>
+                                <span class="text-[24px] leading-[24px] block">in Deals Locked.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper-slide !h-auto">
+                    <div class="bg-blue p-[50px] rounded-[40px] text-white h-full flex flex-col">
+                        <h4 class="text-[42px] leading-[52px] mb-[11px] font-GilorySemiBold">Driving Revenue <br> Growth</h4>
+                        <span class="text-lime-green text-[24px] leading-[24px] mb-[44px] block">Sales Development <br> Representative</span>
+                        <ul class="flex flex-col gap-y-[30px] mt-auto">
+                            <li>
+                                <div class="font-GilorySemiBold text-[92px] leading-[92px] mb-[12px]">£100K+</div>
+                                <span class="text-[24px] leading-[24px] block">In Commercial Solar Sales.</span>
+                            </li>
+                            <li>
+                                <div class="font-GilorySemiBold text-[92px] leading-[92px] mb-[12px]">£9750</div>
+                                <span class="text-[24px] leading-[24px] block">From 4-Year IT Contracts.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper-slide !h-auto">
+                    <div class="bg-blue p-[50px] rounded-[40px] text-white h-full flex flex-col">
+                        <h4 class="text-[42px] leading-[52px] mb-[11px] font-GilorySemiBold">Accelerating <br> Sales & Growth</h4>
+                        <span class="text-lime-green text-[24px] leading-[24px] mb-[44px] block">Business Development Manager</span>
+                        <ul class="flex flex-col gap-y-[30px] mt-auto">
+                            <li>
+                                <div class="font-GilorySemiBold text-[92px] leading-[92px] mb-[12px]">£134K+</div>
+                                <span class="text-[24px] leading-[24px] block">In B2B retail sales.</span>
+                            </li>
+                            <li>
+                                <div class="font-GilorySemiBold text-[92px] leading-[92px] mb-[12px]">65%</div>
+                                <span class="text-[24px] leading-[24px] block">Annual B2B revenue targets secured.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="swiper-slide !h-auto">
+                    <div class="bg-blue p-[50px] rounded-[40px] text-white h-full flex flex-col">
+                        <h4 class="text-[42px] leading-[52px] mb-[11px] font-GilorySemiBold">Accelerating <br> Sales & Growth</h4>
+                        <span class="text-lime-green text-[24px] leading-[24px] mb-[44px] block">Business Development Manager</span>
+                        <ul class="flex flex-col gap-y-[30px] mt-auto">
+                            <li>
+                                <div class="font-GilorySemiBold text-[92px] leading-[92px] mb-[12px]">£134K+</div>
+                                <span class="text-[24px] leading-[24px] block">In B2B retail sales.</span>
+                            </li>
+                            <li>
+                                <div class="font-GilorySemiBold text-[92px] leading-[92px] mb-[12px]">65%</div>
+                                <span class="text-[24px] leading-[24px] block">Annual B2B revenue targets secured.</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="pb-[310px] mx-[80px]">
+    <div class="text-center w-[60%] mx-auto mb-[95px]">
+        <h2 class="font-GilorySemiBold text-navy-blue mb-[20px] text-[92px] leading-[95px] mb-[20px]">Smart Hiring Approach</h2>
+        <p class="text-dark-gray text-[24px] leading-[28px] ">Unlike a typical staffing agency, we combine the <strong class="font-GilorySemiBold">ease of local hiring</strong> with offshore outsourcing <br> services. Our vetted talent integrates seamlessly into your team for <strong class="font-GilorySemiBold">reliable results.</strong></p>
+    </div>
+    <div class="border-main-blue border rounded-[40px] p-[65px] py-[85px] grid grid-cols-4 gap-[30px]">
+        <div class="py-[44px] relative after:content-[''] after:absolute after:top-0 after:right-0 after:h-full after:w-[56px] after:bg-gradient-to-l after:from-[#D5D5D5] after:to-white after:-skew-y-[36deg] pr-[15px]]">
+            <h4 class="text-main-blue font-GilorySemiBold text-[46px] leading-[54px] mb-[18px]">Cost-Free <br> Hiring</h4>
+            <p class="text-[24px] leading-[28px] pr-[38px]">Reduce costs by up to 70% with pre-vetted professionals, with no recruitment fees and no onboarding charges.</p>
+        </div>
+        <div class="py-[44px] relative after:content-[''] after:absolute after:top-0 after:right-0 after:h-full after:w-[56px] after:bg-gradient-to-l after:from-[#D5D5D5] after:to-white after:-skew-y-[36deg] pr-[15px]]">
+            <h4 class="text-main-blue font-GilorySemiBold text-[46px] leading-[54px] mb-[18px]">Rigorous <br> Screening</h4>
+            <p class="text-[24px] leading-[28px] pr-[38px]">Every candidate is tested for skills, language, and cultural fit, giving you access to staffing that meets your standards in as little as 10 days.</p>
+        </div>
+        <div class="py-[44px] relative after:content-[''] after:absolute after:top-0 after:right-0 after:h-full after:w-[56px] after:bg-gradient-to-l after:from-[#D5D5D5] after:to-white after:-skew-y-[36deg] pr-[15px]]">
+            <h4 class="text-main-blue font-GilorySemiBold text-[46px] leading-[54px] mb-[18px]">Dedicated <br> Teams</h4>
+            <p class="text-[24px] leading-[28px] pr-[38px]">Your Boffins align with your goals and are supported by our managed office, HR, and IT infrastructure.</p>
+        </div>
+        <div class="py-[44px]">
+            <h4 class="text-main-blue font-GilorySemiBold text-[46px] leading-[54px] mb-[18px]">Risk-Free <br> Trial</h4>
+            <p class="text-[24px] leading-[28px] pr-[38px]">Start with a free one-week trial to ensure the right fit before you commit.</p>
+        </div>
+
+    </div>
+</section>
+<section class="pb-[80px]">
+    <div class="mb-[50px] 4xl:mx-[80px] lg:mx-[24px] mx-[24px] flex lg:flex-row flex-col justify-between">
+        <div>
+            <h2 class="font-GiloryBold text-[clamp(50px,6vw,92px)] leading-[clamp(55px,7vw,95px)] mb-[2px] text-navy-blue">Meet our Team</h2>
+            <span class="text-[32px] leading-[32px] text-[#646464] inline-block">Passionate - Proactive - Expert</span>
+        </div>
+        <div class="">
+            <a href="#" class="relative cursor-pointer flex mx-auto group transition-all duration-500 ease-in-out">
+                  <span class="group-hover:bg-lime-green transition-all duration-500 ease-in-out group-hover:text-dark-gray bg-main-blue md:text-[24px] sm:text-[22px] text-[20px] sm:leading-[22px] leading-[20px] md:leading-[24px] font-GilorySemiBold rounded-[30px] sm:p-[18px_64px_19px_65px] p-[18px_44px] inline-block text-white transform group-hover:translate-x-[60px]">
+                    Get in touch
+                  </span>
+                <span class="group-hover:bg-lime-green transition-all duration-500 ease-in-out group-hover:text-dark-gray inline-grid place-content-center sm:w-[61px] w-[56px] h-[56px] sm:h-[61px] rounded-full bg-main-blue text-white text-[24px] order-2 group-hover:order-1 transform group-hover:translate-x-[-496%]">
+                         <i class="fa-solid fa-arrow-right rotate-[315deg] group-hover:rotate-[360deg]"></i>
+                </span>
+            </a>
+        </div>
+    </div>
+    <div  class="4xl:ml-[80px] lg:ml-[24px] ml-[24px] sm:mr-0 mr-[24px] slider">
+        <div class="swiper" id="team_slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="relative h-full">
+                        <figure class="rounded-[40px] overflow-hidden h-full">
+                            <img src="src/images/antash_mirza-img.png" alt="antash_mirza-img" class="h-full object-[45%_8%] object-cover grayscale ">
+                        </figure>
+                        <div class="px-[30px] py-[20px] opacity-0 team_slider_text transition-all duration-500 ease-in-out rounded-bl-[40px] rounded-br-[40px] flex items-center justify-between absolute bottom-0 w-full bg-[linear-gradient(90.86deg,rgba(20,20,20,0.5)_0.07%,rgba(15,8,75,0.5)_51.78%,rgba(20,20,20,0.5)_98.73%)] backdrop-blur-[30px]">
+                            <div class="text-white">
+                                <h6 class="text-[32px] leading-[32px] whitespace-nowrap">Antash Mirza</h6>
+                                <span class="text-[24px] leading-[24px] whitespace-nowrap">CEO & Founder of TopBoffin</span>
+                            </div>
+                            <figure>
+                                <img src="src/images/small-eye-img.png" alt="small-eye-img.png">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="relative h-full">
+                        <figure class="rounded-[40px] overflow-hidden h-full">
+                            <img src="src/images/antash_mirza-img.png" alt="antash_mirza-img" class="h-full object-[45%_8%] object-cover grayscale ">
+                        </figure>
+                        <div class="px-[30px] py-[20px] opacity-0 team_slider_text transition-all duration-500 ease-in-out rounded-bl-[40px] rounded-br-[40px] flex items-center justify-between absolute bottom-0 w-full bg-[linear-gradient(90.86deg,rgba(20,20,20,0.5)_0.07%,rgba(15,8,75,0.5)_51.78%,rgba(20,20,20,0.5)_98.73%)] backdrop-blur-[30px]">
+                            <div class="text-white">
+                                <h6 class="text-[32px] leading-[32px] whitespace-nowrap">Antash Mirza</h6>
+                                <span class="text-[24px] leading-[24px] whitespace-nowrap">CEO & Founder of TopBoffin</span>
+                            </div>
+                            <figure>
+                                <img src="src/images/small-eye-img.png" alt="small-eye-img.png">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="relative h-full">
+                        <figure class="rounded-[40px] overflow-hidden h-full">
+                            <img src="src/images/antash_mirza-img.png" alt="antash_mirza-img" class="h-full object-[45%_8%] object-cover grayscale ">
+                        </figure>
+                        <div class="px-[30px] py-[20px] opacity-0 team_slider_text transition-all duration-500 ease-in-out rounded-bl-[40px] rounded-br-[40px] flex items-center justify-between absolute bottom-0 w-full bg-[linear-gradient(90.86deg,rgba(20,20,20,0.5)_0.07%,rgba(15,8,75,0.5)_51.78%,rgba(20,20,20,0.5)_98.73%)] backdrop-blur-[30px]">
+                            <div class="text-white">
+                                <h6 class="text-[32px] leading-[32px] whitespace-nowrap">Antash Mirza</h6>
+                                <span class="text-[24px] leading-[24px] whitespace-nowrap">CEO & Founder of TopBoffin</span>
+                            </div>
+                            <figure>
+                                <img src="src/images/small-eye-img.png" alt="small-eye-img.png">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="relative h-full">
+                        <figure class="rounded-[40px] overflow-hidden h-full">
+                            <img src="src/images/antash_mirza-img.png" alt="antash_mirza-img" class="h-full object-[45%_8%] object-cover grayscale ">
+                        </figure>
+                        <div class="px-[30px] py-[20px] opacity-0 team_slider_text transition-all duration-500 ease-in-out rounded-bl-[40px] rounded-br-[40px] flex items-center justify-between absolute bottom-0 w-full bg-[linear-gradient(90.86deg,rgba(20,20,20,0.5)_0.07%,rgba(15,8,75,0.5)_51.78%,rgba(20,20,20,0.5)_98.73%)] backdrop-blur-[30px]">
+                            <div class="text-white">
+                                <h6 class="text-[32px] leading-[32px] whitespace-nowrap">Antash Mirza</h6>
+                                <span class="text-[24px] leading-[24px] whitespace-nowrap">CEO & Founder of TopBoffin</span>
+                            </div>
+                            <figure>
+                                <img src="src/images/small-eye-img.png" alt="small-eye-img.png">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="relative h-full">
+                        <figure class="rounded-[40px] overflow-hidden h-full">
+                            <img src="src/images/antash_mirza-img.png" alt="antash_mirza-img" class="h-full object-[45%_8%] object-cover grayscale ">
+                        </figure>
+                        <div class="px-[30px] py-[20px] opacity-0 team_slider_text transition-all duration-500 ease-in-out rounded-bl-[40px] rounded-br-[40px] flex items-center justify-between absolute bottom-0 w-full bg-[linear-gradient(90.86deg,rgba(20,20,20,0.5)_0.07%,rgba(15,8,75,0.5)_51.78%,rgba(20,20,20,0.5)_98.73%)] backdrop-blur-[30px]">
+                            <div class="text-white">
+                                <h6 class="text-[32px] leading-[32px] whitespace-nowrap">Antash Mirza</h6>
+                                <span class="text-[24px] leading-[24px] whitespace-nowrap">CEO & Founder of TopBoffin</span>
+                            </div>
+                            <figure>
+                                <img src="src/images/small-eye-img.png" alt="small-eye-img.png">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="relative h-full">
+                        <figure class="rounded-[40px] overflow-hidden h-full">
+                            <img src="src/images/antash_mirza-img.png" alt="antash_mirza-img" class="h-full object-[45%_8%] object-cover grayscale ">
+                        </figure>
+                        <div class="px-[30px] py-[20px] opacity-0 team_slider_text transition-all duration-500 ease-in-out rounded-bl-[40px] rounded-br-[40px] flex items-center justify-between absolute bottom-0 w-full bg-[linear-gradient(90.86deg,rgba(20,20,20,0.5)_0.07%,rgba(15,8,75,0.5)_51.78%,rgba(20,20,20,0.5)_98.73%)] backdrop-blur-[30px]">
+                            <div class="text-white">
+                                <h6 class="text-[32px] leading-[32px] whitespace-nowrap">Antash Mirza</h6>
+                                <span class="text-[24px] leading-[24px] whitespace-nowrap">CEO & Founder of TopBoffin</span>
+                            </div>
+                            <figure>
+                                <img src="src/images/small-eye-img.png" alt="small-eye-img.png">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="relative h-full">
+                        <figure class="rounded-[40px] overflow-hidden h-full">
+                            <img src="src/images/antash_mirza-img.png" alt="antash_mirza-img" class="h-full object-[45%_8%] object-cover grayscale ">
+                        </figure>
+                        <div class="px-[30px] py-[20px] opacity-0 team_slider_text transition-all duration-500 ease-in-out rounded-bl-[40px] rounded-br-[40px] flex items-center justify-between absolute bottom-0 w-full bg-[linear-gradient(90.86deg,rgba(20,20,20,0.5)_0.07%,rgba(15,8,75,0.5)_51.78%,rgba(20,20,20,0.5)_98.73%)] backdrop-blur-[30px]">
+                            <div class="text-white">
+                                <h6 class="text-[32px] leading-[32px] whitespace-nowrap">Antash Mirza</h6>
+                                <span class="text-[24px] leading-[24px] whitespace-nowrap">CEO & Founder of TopBoffin</span>
+                            </div>
+                            <figure>
+                                <img src="src/images/small-eye-img.png" alt="small-eye-img.png">
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="bg-dark-gray line-animation overflow-x-hidden">
+    <div class="4xl:p-[145px_76px_76px] 3xl:p-[125px_50px_76px] sm:gap-y-0 gap-y-[20px] 2xl:p-[100px_50px_56px] lg:p-[80px_50px_56px] md:p-[80px_40px_56px] p-[80px_30px_56px] flex justify-between relative 3xl:items-end 3xl:flex-row flex-col">
+        <div class="border-btm"></div>
+        <div class="line-bottom "></div>
+        <ul class="flex 2xl:gap-[40px] gap-[20px] 2xl:flex-row flex-col">
+            <li class="text-white 4xl:text-[32px] 2xl:text-[28px] sm:text-[26px] text-[24px] 4xl:leading-[32px] leading-[32px] font-GiloryBold">Registered Address: <span class="text-lime-green 4xl:text-[24px] 3xl:text-[20px] text-[18px] 3xl:leading-[24px] leading-[18px] font-GiloryMedium block mt-[11px]">22 Gilbert Way, Slough, SL3 7GR</span></li>
+            <li class="text-white 4xl:text-[32px] 2xl:text-[28px] sm:text-[26px] text-[24px] 4xl:leading-[32px] leading-[32px] font-GiloryBold">Mailing Address: <span class="text-lime-green 4xl:text-[24px] 3xl:text-[20px] text-[18px] 3xl:leading-[24px] leading-[18px] font-GiloryMedium block mt-[11px]">Kemp House, 152 – 160 City Road, London, EC1V 2NX</span></li>
+        </ul>
+        <ul>
+            <li class="flex flex-col">
+<!--                <h5 class="text-white text-[32px] leading-[32px] font-GiloryBold mb-[11px] text-right">Let’s Talk</h5>-->
+                <button class="cursor-pointer w-fit sm:ml-auto sm:mb-[11px] mb-[15px] hover:bg-lime-green transition-all duration-500 ease-in-out hover:text-dark-gray bg-main-blue 4xl:text-[24px] 3xl:text-[20px] text-[18px] 3xl:leading-[24px] leading-[18px] font-GilorySemiBold rounded-[30px] p-[18px_34px] inline-block text-white transform group-hover:translate-x-[60px]">Let’s Talk</button>
+                <div class="flex sm:flex-row flex-col  gap-[24px]">
+                    <a href="#" class="text-lime-green 4xl:text-[24px] 3xl:text-[20px] text-[18px] 3xl:leading-[24px] leading-[18px] font-GiloryMedium inline-block ">+44 20 8323 1161</a>
+                    <a href="#" class="text-lime-green 4xl:text-[24px] 3xl:text-[20px] text-[18px] 3xl:leading-[24px] leading-[18px] font-GiloryMedium inline-block">info@topboffin.co.uk</a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <div class="4xl:p-[70px_76px_0] lg:p-[70px_50px_0] md:p-[70px_40px_0] sm:p-[70px_30px_0] p-[50px_30px_0]  relative after:content-[''] after:absolute after:bottom-0 after:right-0 after:w-full after:h-full after:bg-[url('./images/triangle_shape.png')] after:bg-no-repeat after:bg-center after:bg-cover">
+        <div class="flex justify-between items-center  4xl:mb-[300px] mb-[200px] relative z-10">
+            <div class="text-white 2xl:text-[24px] md:text-[20px] text-[18px] leading-[24px] font-GiloryMedium">Copyright <span class="text-lime-green"> © </span> TopBoffin 2022 - All rights Reserved</div>
+            <div>
+                <a href="javascript:void(0)" class="flex" id="backToTop">
+                    <span class="relative 4xl:text-[24px] 3xl:text-[20px] text-[18px] 3xl:leading-[24px] leading-[18px] hidden font-GilorySemiBold text-white md:inline-block p-[19px_32px_18px_33px] rounded-[30px]"><span class="z-10 relative">Back to top</span>
+                     <div class="glass-filter2"></div>
+                    <div class="glass-specular2"></div>
+                    <div class="glass-overlay2"></div>
+                    </span>
+                    <span class="relative 4xl:text-[24px] 3xl:text-[20px] md:text-[18px] text-[16px] 3xl:leading-[24px] md:leading-[18px] leading-[16px] lg:w-[61px] lg:h-[61px] w-[56px] h-[56px] flex items-center justify-center font-GilorySemiBold text-white rounded-full"><i class="fa-solid fa-arrow-up z-10 relative"></i>
+                    <div class="glass-filter2"></div>
+                    <div class="glass-specular2"></div>
+                    <div class="glass-overlay2"></div>
+                    </span>
+                </a>
+            </div>
+        </div>
+        <div class="flex justify-between sm:flex-row flex-col gap-y-2 items-center relative z-10">
+            <figure>
+                <img src="src/images/topboffin_footer_logo.svg" alt="topboffin_footer_logo"/>
+            </figure>
+                <ul class="flex 4xl:gap-[36px] gap-[26px]">
+                    <li><a href="#" class="inline-block text-white 4xl:text-[58px] sm:text-[38px] text-[28px] 4xl:leading-[58px] sm:leading-[38px] leading-[28px]"><i class="fa-brands fa-linkedin-in"></i></a> </li>
+                    <li><a href="#" class="inline-block text-white 4xl:text-[58px] sm:text-[38px] text-[28px] 4xl:leading-[58px] sm:leading-[38px] leading-[28px]"><i class="fa-brands fa-facebook"></i></a> </li>
+                    <li><a href="#" class="inline-block text-white 4xl:text-[58px] sm:text-[38px] text-[28px] 4xl:leading-[58px] sm:leading-[38px] leading-[28px]"><i class="fa-brands fa-instagram"></i></a> </li>
+                </ul>
+        </div>
+    </div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://codepen.io/GreenSock/pen/7ba936b34824fefdccfe2c6d9f0b740b.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/odometer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.20/dist/lenis.min.js"></script>
+<script src="src/js/main.js"></script>
+</body>
+</html>
+
