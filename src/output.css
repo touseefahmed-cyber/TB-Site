@@ -308,14 +308,8 @@
   .mt-\[80px\] {
     margin-top: 80px;
   }
-  .mt-\[126px\] {
-    margin-top: 126px;
-  }
   .mt-\[226px\] {
     margin-top: 226px;
-  }
-  .mt-\[226pxpx\] {
-    margin-top: 226pxpx;
   }
   .mt-auto {
     margin-top: auto;
@@ -895,9 +889,6 @@
   .pb-\[250px\] {
     padding-bottom: 250px;
   }
-  .pb-\[270px\] {
-    padding-bottom: 270px;
-  }
   .pb-\[310px\] {
     padding-bottom: 310px;
   }
@@ -1189,6 +1180,14 @@
       }
     }
   }
+  .group-hover\:translate-x-\[-436\%\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        --tw-translate-x: -436%;
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+  }
   .group-hover\:translate-x-\[-496\%\] {
     &:is(:where(.group):hover *) {
       @media (hover: hover) {
@@ -1333,6 +1332,12 @@
       right: calc(var(--spacing) * 0);
     }
   }
+  .after\:right-\[-15px\] {
+    &::after {
+      content: var(--tw-content);
+      right: -15px;
+    }
+  }
   .after\:right-\[-49px\] {
     &::after {
       content: var(--tw-content);
@@ -1405,6 +1410,12 @@
       content: var(--tw-content);
       --tw-gradient-position: to left in oklab;
       background-image: linear-gradient(var(--tw-gradient-stops));
+    }
+  }
+  .after\:bg-\[url\(\'\.\/images\/shadow_shape\.png\'\)\] {
+    &::after {
+      content: var(--tw-content);
+      background-image: url('./images/shadow_shape.png');
     }
   }
   .after\:bg-\[url\(\'\.\/images\/triangle_shape\.png\'\)\] {
