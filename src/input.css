@@ -151,8 +151,8 @@
     }
     .arrow-icon {@apply bottom-[30px] left-[30px] absolute;}
     .faq-item.faq-active .arrow-icon{@apply right-[30px] left-auto;}
-    .faq-slider .swiper-slide {@apply 3xl:flex-[0_0_20%] 2xl:flex-[0_0_24%] lg:flex-[0_0_28%] md:flex-[0_0_40%] sm:flex-[0_0_50%] flex-[0_0_70%];}
-    .faq-slider .swiper-slide.faq-active {@apply lg:flex-[0_0_29%] md:flex-[0_0_45%] sm:flex-[0_0_55%] flex-[0_0_75%];}
+    .faq-slider .swiper-slide {@apply 3xl:flex-[0_0_20%] 2xl:flex-[0_0_24%] lg:flex-[0_0_28%] md:flex-[0_0_40%] sm:flex-[0_0_50%] flex-[0_0_40%];}
+    .faq-slider .swiper-slide.faq-active {@apply xl:flex-[0_0_29%] lg:flex-[0_0_36%] md:flex-[0_0_45%] sm:flex-[0_0_55%] flex-[0_0_65%];}
 
     .mySwiper .swiper-wrapper .swiper-slide .curve-shape:after {
         content: "";
@@ -169,14 +169,14 @@
         box-shadow: 13px 21px 0px 13px #4E63F6;
     }
     .arrow_btn .swiper_btn {
-        @apply xl:!w-[120px] !w-[100px] md:!h-[60px] !h-[40px] rounded-[30px] transition-all duration-500 ease-in-out;
+        @apply 4xl:!w-[120px] md:!w-[100px] !w-[50px] 4xl:!h-[60px] md:!h-[40px] !h-[25px] rounded-[30px] transition-all duration-500 ease-in-out;
     }
     .arrow_btn .swiper_btn:hover + div,
     .arrow_btn .swiper-button-prev:has(+ .swiper-button-next:hover) {
-        @apply md:!w-[60px] md:!h-[60px] !w-[40px] !h-[40px] rounded-full;
+        @apply 4xl:!w-[60px] 4xl:!h-[60px] md:!w-[40px] md:!h-[40px] !w-[25px] !h-[25px] rounded-full;
     }
     .arrow_btn .swiper_btn:hover{
-        @apply md:!w-[180px] !w-[140px];
+        @apply 4xl:!w-[180px] md:!w-[120px] !w-[80px];
     }
     .arrow_btn .swiper_btn:hover i{
         font-size: 30px;

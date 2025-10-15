@@ -308,12 +308,21 @@ faqItems.forEach(item => {
 //Faq slider
 var swiper = new Swiper(".faq-slider", {
     slidesPerView: "auto",
-    spaceBetween: 16,
+    spaceBetween: 6, // default gap
     navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        641: { // when screen width >= 768px
+            spaceBetween: 16,
+        },
+        1024: { // when screen width >= 1024px
+            spaceBetween: 16,
+        },
+    },
 });
+
 //slider
 var cursor = document.querySelector("#cursor");
 document.body.addEventListener("mousemove", function(e) {
