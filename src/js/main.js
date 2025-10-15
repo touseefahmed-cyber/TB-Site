@@ -21,6 +21,8 @@ requestAnimationFrame(raf);
 // menu bar
 
 let tl = gsap.timeline({ paused: true }); // timeline ab default paused hogi
+tl.to(".mobile_menu", { opacity: 1, duration: 0.5, ease: "power2.out" });
+
 tl.from(".mobile_menu", {
     y: "-100%",   // wrap in quotes
     ease: "power2.out",
