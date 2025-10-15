@@ -8,19 +8,29 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
     <link href="src/output.css" rel="stylesheet">
 </head>
-<body class="overflow-x-hidden">
+<body class="overflow-hidden">
 <div id="cursor"></div>
-<header id="header" class=" 4xl:px-[80px] top-[50px] absolute px-[30px] z-30 py-[20px] w-full transition-all duration-500 ease-in-out">
-    <div class="flex justify-between items-center px-[20px]">
+<header id="header" class=" 4xl:px-[80px] lg:top-[50px] top-[12px] absolute px-[30px] z-30 py-[20px] w-full transition-all duration-500 ease-in-out">
+    <div class="flex justify-between items-center 2xl:px-[20px] px-[10px]">
         <a href="#">
             <img src="src/images/logo.svg" alt="logo">
         </a>
-        <div class="flex gap-4 items-center">
-            <div class="glass-container py-[16px] px-[32px] rounded-[100px]">
+        <button class="menu_btn lg:hidden flex w-[40px] h-[40px] rounded-full relative flex items-center justify-center">
+            <div class="glass-filter"></div>
+            <div class="glass-overlay"></div>
+            <div class="glass-specular"></div>
+            <div class="relative z-10 space-y-[2px]">
+                <div class="flex justify-end"><span class="h-[4px] w-[11px] bg-white block rounded-2xl "></span></div>
+                <div ><span class="h-[4px] w-[21px] bg-white block rounded-2xl"></span></div>
+                <div><span class="h-[4px] w-[21px] bg-white block rounded-2xl"></span></div>
+            </div>
+        </button>
+        <div class="lg:flex hidden gap-4 items-center">
+            <div class="glass-container 2xl:py-[16px] py-[14px] px-[32px] rounded-[100px]">
                 <div class="glass-filter"></div>
                 <div class="glass-overlay"></div>
                 <div class="glass-specular"></div>
-                <ul class="flex gap-[36px] relative z-10">
+                <ul class="flex 2xl:gap-[36px] gap-[26px] relative z-10">
                     <li><a href="#" class="text-white font-GilorySemiBold text-[24px] leading-[24px]">Services</a> </li>
                     <li><a href="#" class="text-white font-GilorySemiBold text-[24px] leading-[24px]">Portfolio</a> </li>
                     <li><a href="#" class="text-white font-GilorySemiBold text-[24px] leading-[24px]">People</a> </li>
@@ -28,11 +38,49 @@
                 </ul>
             </div>
             <div>
-                <a href="#" class="inline-block font-GilorySemiBold text-blue text-[24px] leading-normal bg-white rounded-[30px] p-[12px_33px_13px_32px] hire_btn">Hire Now</a>
+                <a href="#" class="inline-block font-GilorySemiBold text-blue text-[24px] leading-normal bg-white rounded-[30px] 2xl:p-[12px_33px_13px_32px] p-[9px_33px_10px_32px] hire_btn">Hire Now</a>
             </div>
         </div>
     </div>
 </header>
+<div class="mobile_menu absolute h-[100dvh] top-0 bg-white w-full z-40 flex justify-between flex-col py-[30px] pb-[72px]">
+    <div class="px-[23px] flex items-center justify-between">
+        <a href="#">
+            <figure>
+                <img src="src/images/green_logo.svg" alt="green_logo">
+            </figure>
+        </a>
+        <button class="close_btn w-[40px] h-[40px] rounded-full border border-navy-blue flex items-center justify-center"><i class="fas fa-times text-navy-blue"></i></button>
+    </div>
+    <div class="flex justify-end">
+        <ul class="w-[267px] space-y-[20px]">
+            <li class="border-b border-b-[#ACACAC] last:border-none pb-[4px] last:pb-0">
+                <a href="#" class="text-navy-blue text-[36px] leading-[36px] font-GiloryMedium">Home</a>
+            </li>
+            <li class="border-b border-b-[#ACACAC] last:border-none pb-[4px] last:pb-0">
+                <a href="#" class="text-navy-blue text-[36px] leading-[36px] font-GiloryMedium">About</a>
+            </li>
+            <li class="border-b border-b-[#ACACAC] last:border-none pb-[4px] last:pb-0">
+                <a href="#" class="text-navy-blue text-[36px] leading-[36px] font-GiloryMedium">Services</a>
+            </li>
+            <li class="border-b border-b-[#ACACAC] last:border-none pb-[4px] last:pb-0">
+                <a href="#" class="text-navy-blue text-[36px] leading-[36px] font-GiloryMedium">People</a>
+            </li>
+            <li class="border-b border-b-[#ACACAC] last:border-none pb-[4px] last:pb-0">
+                <a href="#" class="text-navy-blue text-[36px] leading-[36px] font-GiloryMedium">Resources</a>
+            </li>
+
+        </ul>
+    </div>
+    <figure class="absolute top-1/2 left-0 transform -translate-y-1/2">
+        <img src="src/images/mobile_menu_shape.png" alt="mobile_menu_shape">
+    </figure>
+    <div class="w-[calc(100%-270px)] mx-auto mobile_contact">
+        <h4 class="text-main-blue text-[24px] leading-[24px] mb-[14px] font-GiloryBold">Let’s Talk</h4>
+        <a href="#" class="font-GiloryMedium text-[16px] leading-[16px] block mb-[9px]">+44 20 8323 1161</a>
+        <a href="#" class="font-GiloryMedium text-[16px] leading-[16px] block">info@topboffin.co.uk</a>
+    </div>
+</div>
 <div class="h-[100dvh]  bg-no-repeat bg-center bg-cover 4xl:m-[50px_80px_0] lg:m-[24px_24px_0] m-[24px_24px_0] lg:rounded-[48px] rounded-[28px] flex items-end relative">
     <video class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 object-cover w-full h-full m-0 -z-20 lg:rounded-[48px] rounded-[28px]" poster="src/images/banner_img.jpg" autoplay muted loop>
         <source src="src/vedio/banner_vedio.mp4" type="video/mp4">

@@ -18,6 +18,83 @@ requestAnimationFrame(raf);
 
 
 //Animation statics section\
+// menu bar
+
+let tl = gsap.timeline({ paused: true }); // timeline ab default paused hogi
+tl.from(".mobile_menu", {
+    y: "-100%",   // wrap in quotes
+    ease: "power2.out",
+});
+tl.from(".mobile_menu a img", {
+    opacity: 0,
+    duration: 0.3,
+});
+tl.from(".close_btn", {
+    opacity: 0,
+    duration: 0.3,
+});
+tl.from(".mobile_menu ul li", {
+    x: 80,
+    opacity: 0,
+    duration: 0.2,
+    stagger: 0.2,
+});
+tl.from(".mobile_menu > figure", {
+    opacity: 0,
+    duration: 0.5,
+});
+tl.from(".mobile_contact", {
+    opacity: 0,
+    duration: 0.5,
+});
+const menu_btn = document.querySelectorAll(".menu_btn");
+const close_btn = document.querySelectorAll(".close_btn");
+
+menu_btn.forEach(btn => {
+    btn.addEventListener("click", function() {
+        tl.play();
+    });
+});
+close_btn.forEach(btn => {
+    btn.addEventListener("click", function() {
+        tl.reverse();
+    });
+});
+// close_btn.addEventListener("click", () => {
+//     tl.reverse(); // backward animation
+//     document.body.style.overflowY = "auto"; // disable scrolling
+//     console.log("close_btn");
+// });
+// menu bar
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // make sure GSAP + ScrollTrigger are loaded on the page BEFORE this script runs
 gsap.registerPlugin(ScrollTrigger);
 
