@@ -176,6 +176,19 @@
     .arrow_btn .swiper_btn:hover i{
         font-size: 30px;
     }
+    #team_slider .swiper-wrapper .swiper-slide {
+        @apply 2xl:flex-[0_0_11%] flex-[0_0_20%] 4xl:!h-[622px] md:!h-[522px] sm:!h-[362px] !h-[264px] !transition-all !duration-500 !ease-in-out;
+    }
+    #team_slider .swiper-slide:first-child {
+        @apply 2xl:flex-[0_0_29%] lg:flex-[0_0_40%] md:flex-[0_0_50%] flex-[0_0_58%];
+    }
+
+    #team_slider .swiper-wrapper:hover .swiper-slide {
+        @apply 2xl:flex-[0_0_11%] flex-[0_0_20%];
+    }
+    #team_slider .swiper-wrapper .swiper-slide:hover {
+        @apply 2xl:flex-[0_0_29%] lg:flex-[0_0_40%] md:flex-[0_0_50%] flex-[0_0_58%];
+    }
 }
 @layer utilities {
 
@@ -269,7 +282,6 @@ html{
 .faq-item.faq-active .faq-question{
     color: #fff;
 }
-
 .big-arrow{
     display: none;
 }
@@ -279,7 +291,6 @@ html{
 .faq-item.faq-active .arrow-icon .big-arrow{
     display: block;
 }
-
 .swiper-button-next, .swiper-button-prev {
     &.swiper-button-disabled {
         cursor: pointer;
@@ -287,7 +298,6 @@ html{
         pointer-events: all;
     }
 }
-
 /*Header*/
 #header{
 }
@@ -331,16 +341,8 @@ html{
 opacity: 1;
 }
 /* base */
-#team_slider .swiper-slide {
-    flex: 0 0 11%;
-    height: 622px;
-    transition: flex .5s ease-in-out;
-}
-
 /* default: first visible child expanded */
-#team_slider .swiper-slide:first-child {
-    flex: 0 0 29.6%;
-}
+
 #team_slider .swiper-slide:first-child .team_slider_text{
     opacity: 1;
 }
@@ -348,14 +350,8 @@ opacity: 1;
     filter: grayscale(0);
 }
 /* when hovering anywhere inside wrapper, collapse all to small */
-#team_slider .swiper-wrapper:hover .swiper-slide {
-    flex: 0 0 11%;
-}
-
 /* hovered slide expands */
-#team_slider .swiper-wrapper .swiper-slide:hover {
-    flex: 0 0 29.6%;
-}
+
 #team_slider .swiper-wrapper .swiper-slide:hover .team_slider_text{
     opacity: 1;
 }
@@ -363,9 +359,6 @@ opacity: 1;
     filter: grayscale(0);
 }
     /* make sure first slide only collapses when it is NOT hovered (so hovering first keeps it expanded) */
-#team_slider .swiper-wrapper:hover .swiper-slide:first-child:not(:hover) {
-    flex: 0 0 11%;
-}
 #team_slider .swiper-wrapper:hover .swiper-slide:first-child:not(:hover) .team_slider_text{
     opacity: 0;
 }
