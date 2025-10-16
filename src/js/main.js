@@ -55,18 +55,20 @@ const close_btn = document.querySelectorAll(".close_btn");
 menu_btn.forEach(btn => {
     btn.addEventListener("click", function() {
         tl.play();
+            document.body.classList.add("overflow-hidden");
+        // 🔴 Stop / Disable Lenis Smooth Scroll
+        lenis.stop(); // This pauses scrolling
+
     });
 });
 close_btn.forEach(btn => {
     btn.addEventListener("click", function() {
         tl.reverse();
+        document.body.classList.add("overflow-x-hidden");
+        lenis.start(); // This pauses scrolling
+
     });
 });
-// close_btn.addEventListener("click", () => {
-//     tl.reverse(); // backward animation
-//     document.body.style.overflowY = "auto"; // disable scrolling
-//     console.log("close_btn");
-// });
 // menu bar
 
 

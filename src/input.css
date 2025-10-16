@@ -83,6 +83,9 @@
     --color-light-white:#F5F5F5;
     --color-lime-green:#C3F55A;
 }
+.scroll-up .menu_btn span{
+    background: #141414;
+}
 
 @layer base {
     h1 { font-family: 'GilroyBold', sans-serif; @apply text-[clamp(27px,4vw,75px)] leading-[clamp(27px,5vw,75px)];}

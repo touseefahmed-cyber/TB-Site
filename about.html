@@ -10,7 +10,7 @@
 </head>
 <body class="overflow-x-hidden">
 <div id="cursor"></div>
-<header id="header" class="black-header 4xl:px-[80px] top-0 absolute px-[30px] z-30 py-[20px] w-full transition-all duration-500 ease-in-out">
+<header id="header" class="black-header 4xl:px-[80px] top-0 absolute lg:px-[30px] px-[14px] z-30 py-[20px] w-full transition-all duration-500 ease-in-out">
     <div class="flex justify-between items-center 2xl:px-[20px] px-[10px]">
         <a href="#">
             <img src="src/images/logo.svg" alt="logo" class="md:w-auto w-[118px]">
@@ -20,9 +20,9 @@
             <div class="glass-overlay"></div>
             <div class="glass-specular"></div>
             <div class="relative z-10 space-y-[2px]">
-                <div class="flex justify-end"><span class="h-[4px] w-[11px] bg-white block rounded-2xl "></span></div>
-                <div ><span class="h-[4px] w-[21px] bg-white block rounded-2xl"></span></div>
-                <div><span class="h-[4px] w-[21px] bg-white block rounded-2xl"></span></div>
+                <div class="flex justify-end"><span class="h-[4px] w-[11px] bg-dark-gray block rounded-2xl "></span></div>
+                <div ><span class="h-[4px] w-[21px] bg-dark-gray block rounded-2xl"></span></div>
+                <div><span class="h-[4px] w-[21px] bg-dark-gray block rounded-2xl"></span></div>
             </div>
         </button>
         <div class="lg:flex hidden gap-4 items-center">
@@ -43,7 +43,7 @@
         </div>
     </div>
 </header>
-<div class="mobile_menu opacity-0  absolute h-[calc(100%-102px)] lg:hidden  flex top-0 bg-white w-full z-40  justify-between flex-col py-[30px] pb-[72px] overflow-x-hidden">
+<div class="mobile_menu opacity-0  fixed  h-[100dvh] lg:hidden  flex top-0 bg-white w-full z-40  justify-between flex-col py-[30px] pb-[72px] overflow-x-hidden">
     <div class="px-[23px] flex items-center justify-between">
         <a href="#">
             <figure>
