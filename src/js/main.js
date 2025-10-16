@@ -183,9 +183,6 @@ window.addEventListener("load", () => {
 
     ScrollTrigger.refresh();
 });
-
-
-
 // ScrollTrigger.create({
 //     snap: 1 / 4 // snap whole page to the closest section!
 // });
@@ -476,4 +473,11 @@ var impactSlider = new Swiper("#team_slider", {
             spaceBetween: 20,
         },
     },
+});
+//vedio pause btn
+const video = document.querySelector(".my-vedio");
+const btn = document.querySelector(".vedio_btn");
+
+btn.addEventListener("click", function () {
+    video.pause(); // Pauses the video
 });
