@@ -293,25 +293,20 @@ backToTopButton.addEventListener("click", function() {
 const faqItems = document.querySelectorAll(".faq-item");
 
 faqItems.forEach(item => {
-    const btn = item.querySelector(".faq-question");
+    item.addEventListener("click", () => {
 
-    btn.addEventListener("click", () => {
-        // close other items
+        // Close all other items
         faqItems.forEach(i => {
             if (i !== item) {
                 i.classList.remove("faq-active");
-                const iIcon = i.querySelector(".icon");
-                if (iIcon) iIcon.textContent = "+";
             }
         });
 
-        // toggle current item
+        // Toggle current item
         item.classList.toggle("faq-active");
-
-        const icon = item.querySelector(".icon");
-        if (icon) icon.textContent = item.classList.contains("faq-active") ? "–" : "+";
     });
 });
+
 //Faq slider
 var swiper = new Swiper(".faq-slider", {
     slidesPerView: "auto",
