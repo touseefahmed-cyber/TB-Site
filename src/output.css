@@ -520,11 +520,17 @@
   .w-\[74\%\] {
     width: 74%;
   }
+  .w-\[78\%\] {
+    width: 78%;
+  }
   .w-\[80\%\] {
     width: 80%;
   }
   .w-\[82\%\] {
     width: 82%;
+  }
+  .w-\[85\%\] {
+    width: 85%;
   }
   .w-\[90px\] {
     width: 90px;
@@ -1104,14 +1110,29 @@
   .text-\[clamp\(33px\,4vw\,92px\)\] {
     font-size: clamp(33px, 4vw, 92px);
   }
+  .text-\[clamp\(33px\,4vw\,150px\)\] {
+    font-size: clamp(33px, 4vw, 150px);
+  }
   .text-\[clamp\(33px\,5vw\,92px\)\] {
     font-size: clamp(33px, 5vw, 92px);
+  }
+  .text-\[clamp\(33px\,5vw\,150px\)\] {
+    font-size: clamp(33px, 5vw, 150px);
   }
   .text-\[clamp\(33px\,6vw\,92px\)\] {
     font-size: clamp(33px, 6vw, 92px);
   }
+  .text-\[clamp\(33px\,6vw\,150px\)\] {
+    font-size: clamp(33px, 6vw, 150px);
+  }
+  .text-\[clamp\(33px\,7vw\,150px\)\] {
+    font-size: clamp(33px, 7vw, 150px);
+  }
   .text-\[clamp\(33px\,8vw\,92px\)\] {
     font-size: clamp(33px, 8vw, 92px);
+  }
+  .text-\[clamp\(33px\,8vw\,150px\)\] {
+    font-size: clamp(33px, 8vw, 150px);
   }
   .text-\[clamp\(33px\,9vw\,150px\)\] {
     font-size: clamp(33px, 9vw, 150px);
@@ -1207,6 +1228,10 @@
     --tw-leading: clamp(33px, 4vw, 100px);
     line-height: clamp(33px, 4vw, 100px);
   }
+  .leading-\[clamp\(33px\,4vw\,150px\)\] {
+    --tw-leading: clamp(33px, 4vw, 150px);
+    line-height: clamp(33px, 4vw, 150px);
+  }
   .leading-\[clamp\(33px\,5vw\,92px\)\] {
     --tw-leading: clamp(33px, 5vw, 92px);
     line-height: clamp(33px, 5vw, 92px);
@@ -1214,6 +1239,10 @@
   .leading-\[clamp\(33px\,5vw\,100px\)\] {
     --tw-leading: clamp(33px, 5vw, 100px);
     line-height: clamp(33px, 5vw, 100px);
+  }
+  .leading-\[clamp\(33px\,5vw\,150px\)\] {
+    --tw-leading: clamp(33px, 5vw, 150px);
+    line-height: clamp(33px, 5vw, 150px);
   }
   .leading-\[clamp\(33px\,6vw\,92px\)\] {
     --tw-leading: clamp(33px, 6vw, 92px);
@@ -1223,9 +1252,21 @@
     --tw-leading: clamp(33px, 6vw, 100px);
     line-height: clamp(33px, 6vw, 100px);
   }
+  .leading-\[clamp\(33px\,6vw\,150px\)\] {
+    --tw-leading: clamp(33px, 6vw, 150px);
+    line-height: clamp(33px, 6vw, 150px);
+  }
+  .leading-\[clamp\(33px\,7vw\,150px\)\] {
+    --tw-leading: clamp(33px, 7vw, 150px);
+    line-height: clamp(33px, 7vw, 150px);
+  }
   .leading-\[clamp\(33px\,8vw\,92px\)\] {
     --tw-leading: clamp(33px, 8vw, 92px);
     line-height: clamp(33px, 8vw, 92px);
+  }
+  .leading-\[clamp\(33px\,8vw\,150px\)\] {
+    --tw-leading: clamp(33px, 8vw, 150px);
+    line-height: clamp(33px, 8vw, 150px);
   }
   .leading-\[clamp\(33px\,9vw\,150px\)\] {
     --tw-leading: clamp(33px, 9vw, 150px);
@@ -1867,6 +1908,11 @@
       width: 52px;
     }
   }
+  .sm\:w-\[80\] {
+    @media (width >= 640px) {
+      width: 80;
+    }
+  }
   .sm\:w-\[106px\] {
     @media (width >= 640px) {
       width: 106px;
@@ -2116,6 +2162,16 @@
       display: inline-block;
     }
   }
+  .md\:\!h-\[600px\] {
+    @media (width >= 768px) {
+      height: 600px !important;
+    }
+  }
+  .md\:h-\[55px\] {
+    @media (width >= 768px) {
+      height: 55px;
+    }
+  }
   .md\:h-\[61px\] {
     @media (width >= 768px) {
       height: 61px;
@@ -2129,6 +2185,11 @@
   .md\:h-\[536px\] {
     @media (width >= 768px) {
       height: 536px;
+    }
+  }
+  .md\:w-\[55px\] {
+    @media (width >= 768px) {
+      width: 55px;
     }
   }
   .md\:w-\[61px\] {
@@ -2474,6 +2535,11 @@
       display: inline-block;
     }
   }
+  .lg\:\!h-\[600px\] {
+    @media (width >= 1024px) {
+      height: 600px !important;
+    }
+  }
   .lg\:h-\[52px\] {
     @media (width >= 1024px) {
       height: 52px;
@@ -2527,6 +2593,16 @@
   .lg\:w-\[80\%\] {
     @media (width >= 1024px) {
       width: 80%;
+    }
+  }
+  .lg\:w-\[82\%\] {
+    @media (width >= 1024px) {
+      width: 82%;
+    }
+  }
+  .lg\:w-\[95\%\] {
+    @media (width >= 1024px) {
+      width: 95%;
     }
   }
   .lg\:w-\[300px\] {
@@ -2905,6 +2981,16 @@
   .\32 xl\:w-\[80\%\] {
     @media (width >= 1200px) {
       width: 80%;
+    }
+  }
+  .\32 xl\:w-\[82\%\] {
+    @media (width >= 1200px) {
+      width: 82%;
+    }
+  }
+  .\32 xl\:w-\[92\%\] {
+    @media (width >= 1200px) {
+      width: 92%;
     }
   }
   .\32 xl\:w-\[424px\] {
@@ -3495,6 +3581,11 @@
   .\34 xl\:text-\[24px\] {
     @media (width >= 1600px) {
       font-size: 24px;
+    }
+  }
+  .\34 xl\:text-\[28px\] {
+    @media (width >= 1600px) {
+      font-size: 28px;
     }
   }
   .\34 xl\:text-\[32px\] {

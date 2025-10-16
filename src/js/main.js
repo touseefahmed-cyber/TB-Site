@@ -170,14 +170,20 @@ document.querySelectorAll('.line-animation').forEach(section => {
 //paralex Effect
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.utils.toArray(".panel").forEach((panel, i) => {
-    ScrollTrigger.create({
-        trigger: panel,
-        start: "top top",
-        pin: true,
-        pinSpacing: false
+window.addEventListener("load", () => {
+
+    gsap.utils.toArray(".panel").forEach((panel) => {
+        ScrollTrigger.create({
+            trigger: panel,
+            start: "top top",
+            pin: true,
+            pinSpacing: false
+        });
     });
+
+    ScrollTrigger.refresh();
 });
+
 
 
 // ScrollTrigger.create({
