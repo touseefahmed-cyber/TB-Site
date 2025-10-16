@@ -365,3 +365,6 @@ opacity: 1;
 #team_slider .swiper-wrapper:hover .swiper-slide:first-child:not(:hover) figure img{
     filter: grayscale(1);
 }
+.swiper-button-lock{
+    display: flex;
+}

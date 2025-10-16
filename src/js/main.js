@@ -422,22 +422,17 @@ var impactSlider = new Swiper(".impactSlider", {
         prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-        // when window width is >= 320px
-        320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-        },
-        // when window width is >= 640px
-        640: {
-            slidesPerView: 1.2,
-            spaceBetween: 15,
+
+        375: {
+            slidesPerView: 1.6,
+            spaceBetween: 8,
         },
         // when window width is >= 1024px
-        1024: {
+        769: {
             slidesPerView: 2.1,
-            spaceBetween: 20,
+            spaceBetween: 10,
         },
-        1440: {
+        1200: {
             slidesPerView: 3.4,
             spaceBetween: 20,
         },
