@@ -170,19 +170,18 @@ document.querySelectorAll('.line-animation').forEach(section => {
 //paralex Effect
 gsap.registerPlugin(ScrollTrigger);
 
-window.addEventListener("load", () => {
-
-    gsap.utils.toArray(".panel").forEach((panel) => {
-        ScrollTrigger.create({
-            trigger: panel,
-            start: "top top",
-            pin: true,
-            pinSpacing: false
-        });
+gsap.utils.toArray(".panel").forEach((panel) => {
+    ScrollTrigger.create({
+        trigger: panel,
+        start: "top top",
+        pin: true,
+        pinSpacing: false,
+        scrub: 2 // This makes the scroll-linked animation smooth over 2 seconds
     });
-
-    ScrollTrigger.refresh();
 });
+
+ScrollTrigger.refresh();
+
 // ScrollTrigger.create({
 //     snap: 1 / 4 // snap whole page to the closest section!
 // });
@@ -440,7 +439,7 @@ var impactSlider = new Swiper(".impactSlider", {
 });
 //TEAM Slider
 
-var impactSlider = new Swiper("#team_slider", {
+var team_slider = new Swiper("#team_slider", {
     slidesPerView: 3.1,
     spaceBetween: 20,
     navigation: {

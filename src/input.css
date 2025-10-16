@@ -86,6 +86,7 @@
 .scroll-up .menu_btn span{
     background: #141414;
 }
+.panels-wrapper { overflow: hidden; }
 
 @layer base {
     h1 { font-family: 'GilroyBold', sans-serif; @apply text-[clamp(27px,4vw,75px)] leading-[clamp(27px,5vw,75px)];}
