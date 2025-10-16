@@ -158,12 +158,7 @@
         content: "";
         box-shadow: 13px 21px 0px 13px #0F084B;
         position: absolute;
-        top: -47px;
-        height: 48px;
-        width: 48px;
-        rotate: 90deg;
-        left: calc(4px * 0);
-        border-bottom-right-radius: 30px;
+        @apply absolute md:top-[-47px] top-[-18px] md:h-[48px] h-[18px] md:w-[48px] w-[18px] rotate-90 md:left-[calc(4px_*_0)] left-[-1px] md:rounded-br-[30px] rounded-br-[12px];
     }
     .mySwiper .swiper-wrapper .swiper-slide:nth-child(even) .curve-shape:after {
         box-shadow: 13px 21px 0px 13px #4E63F6;
